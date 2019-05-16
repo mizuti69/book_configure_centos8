@@ -1,0 +1,949 @@
+
+<!DOCTYPE HTML>
+<html lang="ja" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>システム時刻 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../styles/website.css">
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="5.configure_cron.html" />
+    
+    
+    <link rel="prev" href="3.configure_locale.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="検索すると入力" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Title
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../1.manual_install/">
+            
+                <a href="../1.manual_install/">
+            
+                    
+                    OSのインストール
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../1.manual_install/1.premise.html">
+            
+                <a href="../1.manual_install/1.premise.html">
+            
+                    
+                    はじめに
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../1.manual_install/2.install.html">
+            
+                <a href="../1.manual_install/2.install.html">
+            
+                    
+                    インストール
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../1.manual_install/3.subscribe.html">
+            
+                <a href="../1.manual_install/3.subscribe.html">
+            
+                    
+                    サブスクリプション設定
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    OS基本設定
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="1.network/">
+            
+                <a href="1.network/">
+            
+                    
+                    ネットワーク設定
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1.1" data-path="1.network/1.network_nic.html">
+            
+                <a href="1.network/1.network_nic.html">
+            
+                    
+                    NICの設定
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.2" data-path="1.network/2.network_hostname.html">
+            
+                <a href="1.network/2.network_hostname.html">
+            
+                    
+                    ホスト名の設定
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.3" data-path="1.network/3.network_security.html">
+            
+                <a href="1.network/3.network_security.html">
+            
+                    
+                    ネットワークセキュリティ設定
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="1.configure_selinux.html">
+            
+                <a href="1.configure_selinux.html">
+            
+                    
+                    SELinuxの設定
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="2.configure_target.md">
+            
+                <span>
+            
+                    
+                    SYSTEMDによるサーバ管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="3.configure_locale.html">
+            
+                <a href="3.configure_locale.html">
+            
+                    
+                    システムロケール
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.5" data-path="4.configure_time.html">
+            
+                <a href="4.configure_time.html">
+            
+                    
+                    システム時刻
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="5.configure_cron.html">
+            
+                <a href="5.configure_cron.html">
+            
+                    
+                    cron設定
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="6.configure_logrotate.html">
+            
+                <a href="6.configure_logrotate.html">
+            
+                    
+                    ログローテート
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="7.configure_panic.html">
+            
+                <a href="7.configure_panic.html">
+            
+                    
+                    カーネルパニック対応
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9" data-path="8.configure_systemd.html">
+            
+                <a href="8.configure_systemd.html">
+            
+                    
+                    SYSTEMDログレベルの変更
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.10" data-path="9.configure_operation.html">
+            
+                <a href="9.configure_operation.html">
+            
+                    
+                    運用用設定
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.11" data-path="10.configure_rsyslog.html">
+            
+                <a href="10.configure_rsyslog.html">
+            
+                    
+                    rsyslogの設定
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../3.user/">
+            
+                <a href="../3.user/">
+            
+                    
+                    アカウント管理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../3.user/1.user_default.html">
+            
+                <a href="../3.user/1.user_default.html">
+            
+                    
+                    ユーザーデフォルトの設定
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../3.user/2.user_create.html">
+            
+                <a href="../3.user/2.user_create.html">
+            
+                    
+                    ユーザー・グループの作成
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../4.security/">
+            
+                <a href="../4.security/">
+            
+                    
+                    セキュリティ設定
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../4.security/1.security_sudo.html">
+            
+                <a href="../4.security/1.security_sudo.html">
+            
+                    
+                    ユーザー権限昇格設定
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../4.security/2.security_service.html">
+            
+                <a href="../4.security/2.security_service.html">
+            
+                    
+                    不要なサービスの停止
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../4.security/3.security_firewalld.html">
+            
+                <a href="../4.security/3.security_firewalld.html">
+            
+                    
+                    firewalld
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../5.ssh/">
+            
+                <a href="../5.ssh/">
+            
+                    
+                    SSHサーバ設定
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../5.ssh/1.ssh_config.html">
+            
+                <a href="../5.ssh/1.ssh_config.html">
+            
+                    
+                    基本設定
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../5.ssh/2.ssh_auth.html">
+            
+                <a href="../5.ssh/2.ssh_auth.html">
+            
+                    
+                    認証設定
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../5.ssh/3.ssh_sftp.html">
+            
+                <a href="../5.ssh/3.ssh_sftp.html">
+            
+                    
+                    SFTP設定
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../6.timedate/">
+            
+                <a href="../6.timedate/">
+            
+                    
+                    時刻同期設定
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../6.timedate/1.timedate_chrony.html">
+            
+                <a href="../6.timedate/1.timedate_chrony.html">
+            
+                    
+                    chrony設定
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../7.update/">
+            
+                <a href="../7.update/">
+            
+                    
+                    セキュリティパッチの適用
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../7.update/1.update_dnf.html">
+            
+                <a href="../7.update/1.update_dnf.html">
+            
+                    
+                    アップデートの適応
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../8.smtp/">
+            
+                <a href="../8.smtp/">
+            
+                    
+                    SMTPサーバ設定
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../8.smtp/1.smtp_config.html">
+            
+                <a href="../8.smtp/1.smtp_config.html">
+            
+                    
+                    Postfixのインストール
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../8.smtp/2.smtp_server.html">
+            
+                <a href="../8.smtp/2.smtp_server.html">
+            
+                    
+                    メールサーバ用の設定
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="../8.smtp/3.smtp_client.html">
+            
+                <a href="../8.smtp/3.smtp_client.html">
+            
+                    
+                    メールクライアント・転送用の設定
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4" data-path="../8.smtp/4.smtp_transport.html">
+            
+                <a href="../8.smtp/4.smtp_transport.html">
+            
+                    
+                    送信制限
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5" data-path="../8.smtp/5.smtp_address_limit.html">
+            
+                <a href="../8.smtp/5.smtp_address_limit.html">
+            
+                    
+                    Postfix メールアドレス制御
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.6" data-path="../8.smtp/6.smtp_client_limit.html">
+            
+                <a href="../8.smtp/6.smtp_client_limit.html">
+            
+                    
+                    Postfix接続数制限
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.7" data-path="../8.smtp/7.smtp_blacklist.html">
+            
+                <a href="../8.smtp/7.smtp_blacklist.html">
+            
+                    
+                    ブラックリスト制限
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../9.tips/">
+            
+                <a href="../9.tips/">
+            
+                    
+                    その他
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../9.tips/1.tips_tools.html">
+            
+                <a href="../9.tips/1.tips_tools.html">
+            
+                    
+                    便利ツール
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" data-path="../9.tips/2.tips_fsecure.html">
+            
+                <a href="../9.tips/2.tips_fsecure.html">
+            
+                    
+                    Fsecure Linux セキュリティ コマンドラインエディション
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.3" data-path="../9.tips/3.tips_sysstat.html">
+            
+                <a href="../9.tips/3.tips_sysstat.html">
+            
+                    
+                    sysstatの設定
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.4" data-path="../9.tips/4.tips_audit.html">
+            
+                <a href="../9.tips/4.tips_audit.html">
+            
+                    
+                    Auditの設定
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.5" data-path="../9.tips/5.tips_chage.html">
+            
+                <a href="../9.tips/5.tips_chage.html">
+            
+                    
+                    パスワード有効期限の設定
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.6" data-path="../9.tips/6.tips_nfs.html">
+            
+                <a href="../9.tips/6.tips_nfs.html">
+            
+                    
+                    NFS設定
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            GitBookで公開 
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >システム時刻</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x30B7;&#x30B9;&#x30C6;&#x30E0;&#x6642;&#x523B;">&#x30B7;&#x30B9;&#x30C6;&#x30E0;&#x6642;&#x523B;</h1>
+<h2 id="linux&#x30B7;&#x30B9;&#x30C6;&#x30E0;&#x6642;&#x523B;&#x306E;&#x6982;&#x8981;">Linux&#x30B7;&#x30B9;&#x30C6;&#x30E0;&#x6642;&#x523B;&#x306E;&#x6982;&#x8981;</h2>
+<p>Linux&#x306E;&#x6642;&#x523B;&#x8ABF;&#x6574;&#x306B;&#x306F;&#x300C;&#x5730;&#x57DF;&#x6A19;&#x6E96;&#x6642;(LOCAL)&#x300D;&#x3068;&#x300C;&#x5354;&#x5B9A;&#x4E16;&#x754C;&#x6642;(UTC)&#x300D;&#x304C;&#x3042;&#x308B;<br>&#x9078;&#x629E;&#x5730;&#x57DF;&#x306E;&#x8A2D;&#x5B9A;&#x3092;&#x5909;&#x66F4;&#x3059;&#x308B;&#x4E8B;&#x3067;&#x5730;&#x57DF;&#x6A19;&#x6E96;&#x6642;&#x306B;&#x3059;&#x308B;&#x4E8B;&#x3082;&#x53EF;&#x80FD;  </p>
+<ul>
+<li><p>&#x5730;&#x57DF;&#x6A19;&#x6E96;&#x6642;(LOCAL)
+UTC/GMT&#x304B;&#x3089;&#x53D6;&#x5F97;&#x3057;&#x305F;&#x6642;&#x523B;&#x306B;&#x30BF;&#x30A4;&#x30E0;&#x30BE;&#x30FC;&#x30F3;&#x306E;&#x6A19;&#x6E96;&#x6642;&#x3092;&#x8A08;&#x7B97;&#x3057;&#x305F;&#x6642;&#x9593;<br><code>UTC/GMT &#xB1; &#x30BF;&#x30A4;&#x30E0;&#x30BE;&#x30FC;&#x30F3;</code>  </p>
+</li>
+<li><p>&#x5354;&#x5B9A;&#x4E16;&#x754C;&#x6642;(UTC)
+&#x539F;&#x5B50;&#x6642;&#x8A08;&#x306B;&#x3088;&#x308A;&#x7CBE;&#x5BC6;&#x306B;&#x6642;&#x9593;&#x304C;&#x8ABF;&#x6574;&#x3055;&#x308C;&#x3066;&#x3044;&#x308B;&#x4E16;&#x754C;&#x5171;&#x901A;&#x306E;&#x6A19;&#x6E96;&#x6642;&#x9593;<br>&#x958F;&#x79D2;&#x306E;&#x8ABF;&#x6574;&#x3082;&#x884C;&#x308F;&#x308C;&#x3066;&#x3044;&#x308B;  </p>
+</li>
+</ul>
+<blockquote>
+<p>&#x6700;&#x65B0;&#x306E;&#x30AA;&#x30DA;&#x30EC;&#x30FC;&#x30C6;&#x30A3;&#x30F3;&#x30B0;&#x30B7;&#x30B9;&#x30C6;&#x30E0;&#x306F;&#x3001;2&#x3064;&#x306E;&#x30BF;&#x30A4;&#x30D7;&#x306E;&#x30AF;&#x30ED;&#x30C3;&#x30AF;&#x3092;&#x533A;&#x5225;&#x3057;&#x307E;&#x3059;&#x3002;<br>&#x30EA;&#x30A2;&#x30EB;&#x30BF;&#x30A4;&#x30E0;&#x30AF;&#x30ED;&#x30C3;&#x30AF; (RTC) &#x306F;&#x3001;&#x4E00;&#x822C;&#x306B;&#x30CF;&#x30FC;&#x30C9;&#x30A6;&#x30A7;&#x30A2;&#x30AF;&#x30ED;&#x30C3;&#x30AF; &#x3068;&#x547C;&#x3070;&#x308C;&#x307E;&#x3059;&#x3002;<br>&#x3053;&#x308C;&#x306F;&#x901A;&#x5E38;&#x3001;&#x30B7;&#x30B9;&#x30C6;&#x30E0;&#x30DC;&#x30FC;&#x30C9;&#x4E0A;&#x306E;&#x96C6;&#x7A4D;&#x56DE;&#x8DEF;&#x3067;&#x3001;&#x30AA;&#x30DA;&#x30EC;&#x30FC;&#x30C6;&#x30A3;&#x30F3;&#x30B0;&#x30B7;&#x30B9;&#x30C6;&#x30E0;&#x306E;&#x73FE;&#x884C;&#x72B6;&#x614B;&#x304B;&#x3089;&#x306F;&#x5B8C;&#x5168;&#x306B;&#x72EC;&#x7ACB;&#x3057;&#x3066;&#x304A;&#x308A;&#x3001;&#x30B3;&#x30F3;&#x30D4;&#x30E5;&#x30FC;&#x30BF;&#x30FC;&#x304C;&#x30B7;&#x30E3;&#x30C3;&#x30C8;&#x30C0;&#x30A6;&#x30F3;&#x3057;&#x3066;&#x3082;&#x7A3C;&#x50CD;&#x3057;&#x3066;&#x3044;&#x307E;&#x3059;&#x3002;<br>&#x30B7;&#x30B9;&#x30C6;&#x30E0;&#x30AF;&#x30ED;&#x30C3;&#x30AF;&#x306F;&#x30BD;&#x30D5;&#x30C8;&#x30A6;&#x30A7;&#x30A2;&#x30AF;&#x30ED;&#x30C3;&#x30AF; &#x3068;&#x3082;&#x547C;&#x3070;&#x308C;&#x3001;&#x30AB;&#x30FC;&#x30CD;&#x30EB;&#x304C;&#x7DAD;&#x6301;&#x3057;&#x3001;&#x305D;&#x306E;&#x521D;&#x671F;&#x5024;&#x306F;&#x30EA;&#x30A2;&#x30EB;&#x30BF;&#x30A4;&#x30E0;&#x30AF;&#x30ED;&#x30C3;&#x30AF;&#x306B;&#x57FA;&#x3065;&#x3044;&#x3066;&#x3044;&#x307E;&#x3059;&#x3002;<br>&#x30B7;&#x30B9;&#x30C6;&#x30E0;&#x304C;&#x8D77;&#x52D5;&#x3059;&#x308B;&#x3068;&#x30B7;&#x30B9;&#x30C6;&#x30E0;&#x30AF;&#x30ED;&#x30C3;&#x30AF;&#x306F;&#x521D;&#x671F;&#x5316;&#x3055;&#x308C;&#x3001;&#x30EA;&#x30A2;&#x30EB;&#x30BF;&#x30A4;&#x30E0;&#x30AF;&#x30ED;&#x30C3;&#x30AF;&#x3068;&#x306F;&#x5B8C;&#x5168;&#x306B;&#x72EC;&#x7ACB;&#x3057;&#x305F;&#x3082;&#x306E;&#x306B;&#x306A;&#x308A;&#x307E;&#x3059;&#x3002;<br>&#x30EA;&#x30A2;&#x30EB;&#x30BF;&#x30A4;&#x30E0;&#x30AF;&#x30ED;&#x30C3;&#x30AF;&#x306F;&#x3001;&#x30ED;&#x30FC;&#x30AB;&#x30EB;&#x30BF;&#x30A4;&#x30E0;&#x304B;&#x5354;&#x5B9A;&#x4E16;&#x754C;&#x6642;(UTC)&#x306E;&#x3044;&#x305A;&#x308C;&#x304B;&#x3092;&#x4F7F;&#x3046;&#x3053;&#x3068;&#x304C;&#x3067;&#x304D;&#x307E;&#x3059;&#x3002;<br>&#x30EA;&#x30A2;&#x30EB;&#x30BF;&#x30A4;&#x30E0;&#x30AF;&#x30ED;&#x30C3;&#x30AF;&#x304C; UTC &#x3092;&#x4F7F;&#x3046;&#x3088;&#x3046;&#x306B;&#x8A2D;&#x5B9A;&#x3059;&#x308B;&#x3068;&#x3001;&#x30B7;&#x30B9;&#x30C6;&#x30E0;&#x30AF;&#x30ED;&#x30C3;&#x30AF;&#x306F;&#x4F7F;&#x7528;&#x4E2D;&#x306E;&#x30BF;&#x30A4;&#x30E0;&#x30BE;&#x30FC;&#x30F3;&#x306B;&#x305D;&#x306E;&#x6642;&#x9593;&#x5DEE;&#x3092;&#x9069;&#x7528;&#x3057;&#x3066;&#x8A08;&#x7B97;&#x3055;&#x308C;&#x3001;&#x8A72;&#x5F53;&#x3059;&#x308B;&#x5834;&#x5408;&#x306F;&#x3001;&#x590F;&#x6642;&#x9593;(DST)&#x3082;&#x540C;&#x69D8;&#x306B;&#x8A08;&#x7B97;&#x3055;&#x308C;&#x307E;&#x3059;&#x3002;<br>&#x5BFE;&#x7167;&#x7684;&#x306B;&#x3001;&#x30ED;&#x30FC;&#x30AB;&#x30EB;&#x30BF;&#x30A4;&#x30E0;&#x306F;&#x5B58;&#x5728;&#x5730;&#x306E;&#x30BF;&#x30A4;&#x30E0;&#x30BE;&#x30FC;&#x30F3;&#x306B;&#x304A;&#x3051;&#x308B;&#x5B9F;&#x969B;&#x306E;&#x6642;&#x9593;&#x3092;&#x8868;&#x3057;&#x307E;&#x3059;&#x3002;<br>&#x307B;&#x3068;&#x3093;&#x3069;&#x306E;&#x5834;&#x5408;&#x306F;&#x3001;UTC &#x306E;&#x4F7F;&#x7528;&#x304C;&#x63A8;&#x5968;&#x3055;&#x308C;&#x307E;&#x3059;&#x3002;<br>&#x53C2;&#x8003;&#xFF1A;<a href="https://access.redhat.com/documentation/ja-jp/red_hat_enterprise_linux/7/html/system_administrators_guide/chap-configuring_the_date_and_time" target="_blank">https://access.redhat.com/documentation/ja-jp/red_hat_enterprise_linux/7/html/system_administrators_guide/chap-configuring_the_date_and_time</a>  </p>
+</blockquote>
+<h2 id="&#x30B7;&#x30B9;&#x30C6;&#x30E0;&#x30BF;&#x30A4;&#x30E0;&#x30BE;&#x30FC;&#x30F3;&#x306E;&#x8A2D;&#x5B9A;">&#x30B7;&#x30B9;&#x30C6;&#x30E0;&#x30BF;&#x30A4;&#x30E0;&#x30BE;&#x30FC;&#x30F3;&#x306E;&#x8A2D;&#x5B9A;</h2>
+<p>&#x30B7;&#x30B9;&#x30C6;&#x30E0;&#x5168;&#x822C;&#x306E;&#x6642;&#x523B;&#x72B6;&#x6CC1;&#x3092;&#x78BA;&#x8A8D;  </p>
+<pre><code># timedatectl
+               Local time: &#x706B; 2019-05-14 19:32:43 JST
+           Universal time: &#x706B; 2019-05-14 10:32:43 UTC
+                 RTC time: &#x706B; 2019-05-14 10:32:41
+                Time zone: Asia/Tokyo (JST, +0900)
+System clock synchronized: yes
+              NTP service: active
+          RTC in local TZ: no
+</code></pre><p>&#x30BF;&#x30A4;&#x30E0;&#x30BE;&#x30FC;&#x30F3;&#x306E;&#x5909;&#x66F4;  </p>
+<pre><code># timedatectl set-timezone Asia/Tokyo
+</code></pre><p>&#x5229;&#x7528;&#x53EF;&#x80FD;&#x306A;&#x30BF;&#x30A4;&#x30E0;&#x30BE;&#x30FC;&#x30F3;&#x306E;&#x78BA;&#x8A8D;  </p>
+<pre><code># timedatectl list-timezones | grep Asia
+</code></pre><blockquote>
+<p>&#x6CE8;&#x610F;<br>timedatectl &#x306F;&#x3001;chrony &#x307E;&#x305F;&#x306F; ntpd &#x306E;&#x30B9;&#x30C6;&#x30FC;&#x30BF;&#x30B9;&#x3078;&#x306E;&#x5909;&#x66F4;&#x3092;&#x5373;&#x5EA7;&#x306B;&#x8A8D;&#x8B58;&#x3057;&#x307E;&#x305B;&#x3093;&#x3002;&#x3053;&#x308C;&#x3089;&#x306E;&#x30C4;&#x30FC;&#x30EB;&#x306E;&#x8A2D;&#x5B9A;&#x307E;&#x305F;&#x306F;&#x30B9;&#x30C6;&#x30FC;&#x30BF;&#x30B9;&#x3092;&#x5909;&#x66F4;&#x3057;&#x305F;&#x5834;&#x5408;&#x306F;&#x3001;&#x4EE5;&#x4E0B;&#x306E;&#x30B3;&#x30DE;&#x30F3;&#x30C9;&#x3092;&#x5B9F;&#x884C;&#x3057;&#x307E;&#x3059;&#x3002;<br><code>systemctl restart systemd-timedated.service</code>  </p>
+</blockquote>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="3.configure_locale.html" class="navigation navigation-prev " aria-label="Previous page: システムロケール">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="5.configure_cron.html" class="navigation navigation-next " aria-label="Next page: cron設定">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"システム時刻","level":"1.3.5","depth":2,"next":{"title":"cron設定","level":"1.3.6","depth":2,"path":"2.configure/5.configure_cron.md","ref":"2.configure/5.configure_cron.md","articles":[]},"previous":{"title":"システムロケール","level":"1.3.4","depth":2,"path":"2.configure/3.configure_locale.md","ref":"2.configure/3.configure_locale.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"ja","gitbook":"*"},"file":{"path":"2.configure/4.configure_time.md","mtime":"2019-05-14T10:35:12.502Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-05-16T10:40:13.565Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
