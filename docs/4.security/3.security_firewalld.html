@@ -969,6 +969,7 @@ table ip filter {
 <blockquote>
 <p>&#x203B;&#x306A;&#x305C;&#x304B;&#x30ED;&#x30FC;&#x30AB;&#x30EB;&#x3067;&#x691C;&#x8A3C;&#x3057;&#x3066;&#x3044;&#x308B;&#x3068;&#x304D;&#x306B;&#x5B9A;&#x7FA9;&#x306F;&#x554F;&#x984C;&#x306A;&#x304F;&#x3066;&#x3082;&#x7E4B;&#x304C;&#x3089;&#x306A;&#x304F;&#x306A;&#x308B;&#x4E8B;&#x304C;&#x3042;&#x3063;&#x305F;&#x306E;&#x3067;&#x6CE8;&#x610F;  </p>
 </blockquote>
+<p><strong>OS&#x7CFB;&#x3088;&#x308A;firewalld&#x3067;&#x7BA1;&#x7406;&#x3057;&#x3066;&#x3044;&#x308B;&#x901A;&#x5E38;&#x30EB;&#x30FC;&#x30EB;&#x3001;&#x30EA;&#x30C3;&#x30C1;&#x30EB;&#x30FC;&#x30EB;&#x3068;&#x30C0;&#x30A4;&#x30EC;&#x30AF;&#x30C8;&#x30EB;&#x30FC;&#x30EB;&#x306F;&#x5225;&#x7BA1;&#x7406;</strong>&#x306B;&#x306A;&#x3063;&#x3066;&#x3044;&#x308B;&#x3063;&#x307D;&#x304F;<br>&#x4ECA;&#x307E;&#x3067;&#x306E;&#x3088;&#x3046;&#x306B;&#x30C0;&#x30A4;&#x30EC;&#x30AF;&#x30C8;&#x30EB;&#x30FC;&#x30EB;&#x3067;&#x5168;&#x3066;&#x306E;&#x30DD;&#x30EA;&#x30B7;&#x30FC;&#x7BA1;&#x7406;&#x304C;&#x3067;&#x304D;&#x306A;&#x3044;&#xFF08;&#x591A;&#x5206;&#xFF09;<br>&#x30A4;&#x30F3;&#x30D7;&#x30C3;&#x30C8;&#x5074;&#x306E;&#x901A;&#x4FE1;&#x306F;firewalld&#x306E;&#x901A;&#x5E38;&#x30EB;&#x30FC;&#x30EB;&#x3001;&#x30A2;&#x30A6;&#x30C8;&#x30D7;&#x30C3;&#x30C8;&#x5074;&#x306E;&#x901A;&#x4FE1;&#x306F;&#x30C0;&#x30A4;&#x30EC;&#x30AF;&#x30C8;&#x30EB;&#x30FC;&#x30EB;&#x3068;&#x5B9A;&#x7FA9;&#x3092;&#x305D;&#x308C;&#x305E;&#x308C;&#x8A2D;&#x5B9A;&#x3059;&#x308B;&#x5FC5;&#x8981;&#x304C;&#x3042;&#x308B;<br>&#x51E6;&#x7406;&#x512A;&#x5148;&#x9806;&#x4F4D;&#x306F; &#x901A;&#x5E38;&#x30EB;&#x30FC;&#x30EB;&#xFF08;&#x30C7;&#x30D5;&#x30A9;&#x30EB;&#x30C8;all drop&#xFF09;&#xFF1E;&#x30C0;&#x30A4;&#x30EC;&#x30AF;&#x30C8;&#x30EB;&#x30FC;&#x30EB;&#xFF08;&#x30C7;&#x30D5;&#x30A9;&#x30EB;&#x30C8; all accept&#xFF09;&#xFF1F;  </p>
 <h3 id="&#x901A;&#x5E38;&#x30DD;&#x30EA;&#x30B7;&#x30FC;&#x5B9A;&#x7FA9;">&#x901A;&#x5E38;&#x30DD;&#x30EA;&#x30B7;&#x30FC;&#x5B9A;&#x7FA9;</h3>
 <blockquote>
 <p>&#x500B;&#x4EBA;&#x7684;&#x306B;&#x5229;&#x7528;&#x306F;&#x975E;&#x63A8;&#x5968;  </p>
@@ -1029,7 +1030,8 @@ firewall-cmd [--permanent] --direct --remove-rule {ipv4|ipv6|eb} &lt;&#x30C6;&#x
 </code></pre><p>&#x30EB;&#x30FC;&#x30EB;&#x3092;&#x53CD;&#x6620;  </p>
 <pre><code># firewall-cmd --reload
 # firewall-cmd --direct --get-all-rules
-# table ip filter {
+# nft list table filter
+table ip filter {
         chain INPUT {
                 type filter hook input priority 0; policy accept;
                 ip saddr 127.0.0.1 counter packets 0 bytes 0 accept
@@ -1073,6 +1075,11 @@ firewall-cmd [--permanent] --direct --remove-rule {ipv4|ipv6|eb} &lt;&#x30C6;&#x
 </ul>
 <pre><code># firewall-cmd --lockdown-on
 # firewall-cmd --lockdown-off
+</code></pre><h2 id="&#x30ED;&#x30AE;&#x30F3;&#x30B0;">&#x30ED;&#x30AE;&#x30F3;&#x30B0;</h2>
+<pre><code># vim /etc/firewalld/firewalld.conf
+LogDenied=unicast
+
+# systemctl restart firewalld
 </code></pre>
                                 
                                 </section>
@@ -1116,7 +1123,7 @@ firewall-cmd [--permanent] --direct --remove-rule {ipv4|ipv6|eb} &lt;&#x30C6;&#x
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"firewalld","level":"1.5.3","depth":2,"next":{"title":"SSHサーバ設定","level":"1.6","depth":1,"path":"5.ssh/index.md","ref":"5.ssh/index.md","articles":[{"title":"基本設定","level":"1.6.1","depth":2,"path":"5.ssh/1.ssh_config.md","ref":"5.ssh/1.ssh_config.md","articles":[]},{"title":"認証設定","level":"1.6.2","depth":2,"path":"5.ssh/2.ssh_auth.md","ref":"5.ssh/2.ssh_auth.md","articles":[]},{"title":"SFTP設定","level":"1.6.3","depth":2,"path":"5.ssh/3.ssh_sftp.md","ref":"5.ssh/3.ssh_sftp.md","articles":[]}]},"previous":{"title":"不要なサービスの停止","level":"1.5.2","depth":2,"path":"4.security/2.security_service.md","ref":"4.security/2.security_service.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"ja","gitbook":"*"},"file":{"path":"4.security/3.security_firewalld.md","mtime":"2019-05-16T10:38:21.357Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-05-16T10:40:13.565Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"firewalld","level":"1.5.3","depth":2,"next":{"title":"SSHサーバ設定","level":"1.6","depth":1,"path":"5.ssh/index.md","ref":"5.ssh/index.md","articles":[{"title":"基本設定","level":"1.6.1","depth":2,"path":"5.ssh/1.ssh_config.md","ref":"5.ssh/1.ssh_config.md","articles":[]},{"title":"認証設定","level":"1.6.2","depth":2,"path":"5.ssh/2.ssh_auth.md","ref":"5.ssh/2.ssh_auth.md","articles":[]},{"title":"SFTP設定","level":"1.6.3","depth":2,"path":"5.ssh/3.ssh_sftp.md","ref":"5.ssh/3.ssh_sftp.md","articles":[]}]},"previous":{"title":"不要なサービスの停止","level":"1.5.2","depth":2,"path":"4.security/2.security_service.md","ref":"4.security/2.security_service.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"ja","gitbook":"*"},"file":{"path":"4.security/3.security_firewalld.md","mtime":"2019-05-17T04:31:18.912Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-06-12T11:58:09.980Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
