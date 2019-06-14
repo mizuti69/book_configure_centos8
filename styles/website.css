@@ -16,7 +16,7 @@ h1 {
 
 pre {
   /*font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace; */
-  font-family: Consolas;
+  font-family: Consolas,"Noto Sans JP";
 }
 
 .markdown-section h2 {
@@ -25,7 +25,7 @@ pre {
 
 .markdown-section code {
   font-size: 14px;  
-  font-family: "Noto Sans JP";
+  font-family: Consolas,"Noto Sans JP";
   background-color: #e4e4e4;
   padding: 1px 5px;
 }
