@@ -6,7 +6,7 @@
   "plugins": [
     "navigator",
     "-japanese-support",
-    "header"
+    "-header"
   ],
   "pluginsConfig": {
     "layout": {
