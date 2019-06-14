@@ -17,6 +17,10 @@
     
             
                 
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-navigator/plugin.css">
+                
+            
+                
                 <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
                 
             
@@ -237,9 +241,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.3" data-path="../2.configure/2.configure_target.md">
+        <li class="chapter " data-level="1.3.3" data-path="../2.configure/2.configure_systemctl.html">
             
-                <span>
+                <a href="../2.configure/2.configure_systemctl.html">
             
                     
                     SYSTEMDによるサーバ管理
@@ -347,6 +351,19 @@
             
                     
                     rsyslogの設定
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.12" data-path="../2.configure/11.configure_cockpit.html">
+            
+                <a href="../2.configure/11.configure_cockpit.html">
+            
+                    
+                    Cockpitのインストール
             
                 </a>
             
@@ -838,9 +855,9 @@
                                 
                                 <h1 id="&#x30E6;&#x30FC;&#x30B6;&#x30FC;&#xFF0F;&#x30B0;&#x30EB;&#x30FC;&#x30D7;&#x306E;&#x4F5C;&#x6210;">&#x30E6;&#x30FC;&#x30B6;&#x30FC;&#xFF0F;&#x30B0;&#x30EB;&#x30FC;&#x30D7;&#x306E;&#x4F5C;&#x6210;</h1>
 <p>&#x8A2D;&#x8A08;&#x306B;&#x3082;&#x3068;&#x3065;&#x304D;&#x30B0;&#x30EB;&#x30FC;&#x30D7;&#x3068;&#x30E6;&#x30FC;&#x30B6;&#x30FC;&#x3092;&#x4F5C;&#x6210;&#x3059;&#x308B;  </p>
-<h2 id="os&#x30B0;&#x30EB;&#x30FC;&#x30D7;&#x306E;&#x4F5C;&#x6210;">OS&#x30B0;&#x30EB;&#x30FC;&#x30D7;&#x306E;&#x4F5C;&#x6210;</h2>
+<h2 id="OS&#x30B0;&#x30EB;&#x30FC;&#x30D7;&#x306E;&#x4F5C;&#x6210;">1. OS&#x30B0;&#x30EB;&#x30FC;&#x30D7;&#x306E;&#x4F5C;&#x6210;</h2>
 <pre><code># groupadd -g ${GID}  ${&#x30B0;&#x30EB;&#x30FC;&#x30D7;&#x540D;}
-</code></pre><h2 id="os&#x30A2;&#x30AB;&#x30A6;&#x30F3;&#x30C8;&#x306E;&#x4F5C;&#x6210;">OS&#x30A2;&#x30AB;&#x30A6;&#x30F3;&#x30C8;&#x306E;&#x4F5C;&#x6210;</h2>
+</code></pre><h2 id="OS&#x30A2;&#x30AB;&#x30A6;&#x30F3;&#x30C8;&#x306E;&#x4F5C;&#x6210;">2. OS&#x30A2;&#x30AB;&#x30A6;&#x30F3;&#x30C8;&#x306E;&#x4F5C;&#x6210;</h2>
 <pre><code># useradd -u ${UID} -g ${&#x30B0;&#x30EB;&#x30FC;&#x30D7;&#x540D;} -G ${&#x30B5;&#x30D6;&#x30B0;&#x30EB;&#x30FC;&#x30D7;&#x540D;} -s ${&#x30ED;&#x30B0;&#x30A4;&#x30F3;&#x30B7;&#x30A7;&#x30EB;} ${&#x30E6;&#x30FC;&#x30B6;&#x30FC;&#x540D;}
 </code></pre><ul>
 <li><code>-M</code>&#x3092;&#x6307;&#x5B9A;&#x3057;&#x305F;&#x5834;&#x5408;&#x30E6;&#x30FC;&#x30B6;&#x30FC;&#x7528;&#x306E;&#x30DB;&#x30FC;&#x30E0;&#x30C7;&#x30A3;&#x30EC;&#x30AF;&#x30C8;&#x30EA;&#x3001;&#x30E1;&#x30FC;&#x30EB;&#x30DC;&#x30C3;&#x30AF;&#x30B9;&#x306F;&#x4F5C;&#x6210;&#x3055;&#x308C;&#x306A;&#x3044;  </li>
@@ -848,12 +865,12 @@
 <li><code>-d</code>&#x3092;&#x6307;&#x5B9A;&#x3057;&#x305F;&#x5834;&#x5408;&#x30DB;&#x30FC;&#x30E0;&#x30C7;&#x30A3;&#x30EC;&#x30AF;&#x30C8;&#x30EA;&#x3092;&#x6307;&#x5B9A;&#x3059;&#x308B;&#x3053;&#x3068;&#x304C;&#x3067;&#x304D;&#x308B;  </li>
 <li><code>-g</code>&#x3092;&#x6307;&#x5B9A;&#x3057;&#x306A;&#x3044;&#x5834;&#x5408;&#x30E6;&#x30FC;&#x30B6;&#x30FC;&#x540D;&#x304C;&#x30B0;&#x30EB;&#x30FC;&#x30D7;&#x540D;&#x306B;&#x6307;&#x5B9A;&#x3055;&#x308C;&#x307E;&#x3059;  </li>
 </ul>
-<h2 id="&#x30D1;&#x30B9;&#x30EF;&#x30FC;&#x30C9;&#x8A2D;&#x5B9A;">&#x30D1;&#x30B9;&#x30EF;&#x30FC;&#x30C9;&#x8A2D;&#x5B9A;</h2>
+<h2 id="&#x30D1;&#x30B9;&#x30EF;&#x30FC;&#x30C9;&#x8A2D;&#x5B9A;">3. &#x30D1;&#x30B9;&#x30EF;&#x30FC;&#x30C9;&#x8A2D;&#x5B9A;</h2>
 <pre><code># passwd ${&#x30E6;&#x30FC;&#x30B6;&#x30FC;&#x540D;}
 </code></pre><ul>
 <li><code>-l</code>&#x30AA;&#x30D7;&#x30B7;&#x30E7;&#x30F3;&#x3092;&#x5229;&#x7528;&#x3057;&#x305F;&#x5834;&#x5408;&#x30A2;&#x30AB;&#x30A6;&#x30F3;&#x30C8;&#x3092;&#x30ED;&#x30C3;&#x30AF;&#x3059;&#x308B;&#x3053;&#x3068;&#x304C;&#x3067;&#x304D;&#x308B;  </li>
 </ul>
-
+<div id="anchors-navbar"><i class="fa fa-anchor"></i><ul><p><a href="#&#x30E6;&#x30FC;&#x30B6;&#x30FC;&#xFF0F;&#x30B0;&#x30EB;&#x30FC;&#x30D7;&#x306E;&#x4F5C;&#x6210;">&#x30E6;&#x30FC;&#x30B6;&#x30FC;&#xFF0F;&#x30B0;&#x30EB;&#x30FC;&#x30D7;&#x306E;&#x4F5C;&#x6210;</a></p><li><a href="#OS&#x30B0;&#x30EB;&#x30FC;&#x30D7;&#x306E;&#x4F5C;&#x6210;">1. OS&#x30B0;&#x30EB;&#x30FC;&#x30D7;&#x306E;&#x4F5C;&#x6210;</a></li><li><a href="#OS&#x30A2;&#x30AB;&#x30A6;&#x30F3;&#x30C8;&#x306E;&#x4F5C;&#x6210;">2. OS&#x30A2;&#x30AB;&#x30A6;&#x30F3;&#x30C8;&#x306E;&#x4F5C;&#x6210;</a></li><li><a href="#&#x30D1;&#x30B9;&#x30EF;&#x30FC;&#x30C9;&#x8A2D;&#x5B9A;">3. &#x30D1;&#x30B9;&#x30EF;&#x30FC;&#x30C9;&#x8A2D;&#x5B9A;</a></li></ul></div><a href="#OS&#x30B0;&#x30EB;&#x30FC;&#x30D7;&#x306E;&#x4F5C;&#x6210;" id="goTop"><i class="fa fa-arrow-up"></i></a>
                                 
                                 </section>
                             
@@ -896,7 +913,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"ユーザー・グループの作成","level":"1.4.2","depth":2,"next":{"title":"セキュリティ設定","level":"1.5","depth":1,"path":"4.security/index.md","ref":"4.security/index.md","articles":[{"title":"ユーザー権限昇格設定","level":"1.5.1","depth":2,"path":"4.security/1.security_sudo.md","ref":"4.security/1.security_sudo.md","articles":[]},{"title":"不要なサービスの停止","level":"1.5.2","depth":2,"path":"4.security/2.security_service.md","ref":"4.security/2.security_service.md","articles":[]},{"title":"firewalld","level":"1.5.3","depth":2,"path":"4.security/3.security_firewalld.md","ref":"4.security/3.security_firewalld.md","articles":[]}]},"previous":{"title":"ユーザーデフォルトの設定","level":"1.4.1","depth":2,"path":"3.user/1.user_default.md","ref":"3.user/1.user_default.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"ja","gitbook":"*"},"file":{"path":"3.user/2.user_create.md","mtime":"2018-06-20T07:50:58.898Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-06-12T11:58:09.980Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"ユーザー・グループの作成","level":"1.4.2","depth":2,"next":{"title":"セキュリティ設定","level":"1.5","depth":1,"path":"4.security/index.md","ref":"4.security/index.md","articles":[{"title":"ユーザー権限昇格設定","level":"1.5.1","depth":2,"path":"4.security/1.security_sudo.md","ref":"4.security/1.security_sudo.md","articles":[]},{"title":"不要なサービスの停止","level":"1.5.2","depth":2,"path":"4.security/2.security_service.md","ref":"4.security/2.security_service.md","articles":[]},{"title":"firewalld","level":"1.5.3","depth":2,"path":"4.security/3.security_firewalld.md","ref":"4.security/3.security_firewalld.md","articles":[]}]},"previous":{"title":"ユーザーデフォルトの設定","level":"1.4.1","depth":2,"path":"3.user/1.user_default.md","ref":"3.user/1.user_default.md","articles":[]},"dir":"ltr"},"config":{"plugins":["navigator","-japanese-support","header"],"styles":{"website":"styles/website.css"},"pluginsConfig":{"search":{},"layout":{"headerPath":"layouts/header.html"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"header":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"navigator":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"ja","gitbook":"*","sharing":{"facebook":false,"twitter":false,"google":true,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","twitter","google","weibo","instapaper","vk"]}},"file":{"path":"3.user/2.user_create.md","mtime":"2018-06-20T07:50:58.898Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-06-14T06:03:18.655Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

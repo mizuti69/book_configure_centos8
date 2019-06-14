@@ -17,6 +17,10 @@
     
             
                 
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-navigator/plugin.css">
+                
+            
+                
                 <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
                 
             
@@ -237,9 +241,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.3" data-path="../2.configure/2.configure_target.md">
+        <li class="chapter " data-level="1.3.3" data-path="../2.configure/2.configure_systemctl.html">
             
-                <span>
+                <a href="../2.configure/2.configure_systemctl.html">
             
                     
                     SYSTEMDによるサーバ管理
@@ -347,6 +351,19 @@
             
                     
                     rsyslogの設定
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.12" data-path="../2.configure/11.configure_cockpit.html">
+            
+                <a href="../2.configure/11.configure_cockpit.html">
+            
+                    
+                    Cockpitのインストール
             
                 </a>
             
@@ -836,14 +853,14 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="os&#x306E;&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;">OS&#x306E;&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;</h1>
+                                <h1 id="OS&#x306E;&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;">OS&#x306E;&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;</h1>
 <p>&#x672C;&#x624B;&#x9806;&#x3067;&#x306F;VirtualBox&#x306B;DVD ISO&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x304B;&#x3089;&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;&#x3092;&#x884C;&#x3046;&#x5834;&#x5408;&#x306E;&#x624B;&#x9806;&#x306B;&#x306A;&#x308B;<br>&#x30B5;&#x30FC;&#x30D0;&#x7528;&#x9014;&#x3068;&#x3057;&#x3066;&#x6700;&#x4F4E;&#x9650;&#x306E;&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;&#x5B8C;&#x4E86;&#x307E;&#x3067;&#x3092;&#x884C;&#x3046;<br>&#x672C;&#x624B;&#x9806;&#x306F;&#x6700;&#x4F4E;&#x8981;&#x4EF6;&#x30B9;&#x30DA;&#x30C3;&#x30AF;&#x306E;&#x30B5;&#x30FC;&#x30D0;&#x3092;&#x7528;&#x610F;&#x3057;GUI&#x306E;&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;&#x3092;&#x884C;&#x3046;  </p>
-<h2 id="&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;&#x8A00;&#x8A9E;&#x306E;&#x9078;&#x629E;">&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;&#x8A00;&#x8A9E;&#x306E;&#x9078;&#x629E;</h2>
+<h2 id="&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;&#x8A00;&#x8A9E;&#x306E;&#x9078;&#x629E;">1. &#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;&#x8A00;&#x8A9E;&#x306E;&#x9078;&#x629E;</h2>
 <p>&#x7528;&#x610F;&#x3057;&#x305F;&#x30E1;&#x30C7;&#x30A3;&#x30A2;&#x3092;&#x5165;&#x30B5;&#x30FC;&#x30D0;&#x3092;&#x8D77;&#x52D5;&#x3059;&#x308B;&#x3068;&#x307E;&#x305A;&#x8A00;&#x8A9E;&#x8A2D;&#x5B9A;&#x753B;&#x9762;&#x306B;&#x306A;&#x308B;<br>&#x3053;&#x3053;&#x3067;&#x306E;&#x8A00;&#x8A9E;&#x306F;&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;&#x51E6;&#x7406;&#x306B;&#x5229;&#x7528;&#x3059;&#x308B;&#x8A00;&#x8A9E;&#x306B;&#x306A;&#x308B;<br>&#x9069;&#x3057;&#x305F;&#x8A00;&#x8A9E;&#x3092;&#x9078;&#x629E;  </p>
 <p><img src="images/os8_install_01.png" width="80%">  </p>
 <p>&#x8A00;&#x8A9E;&#x8A2D;&#x5B9A;&#x3092;&#x884C;&#x3046;&#x3068;&#x5404;&#x7A2E;&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;&#x306E;&#x5404;&#x7A2E;&#x8A2D;&#x5B9A;&#x30DA;&#x30FC;&#x30B8;&#x306B;&#x79FB;&#x52D5;&#x3059;&#x308B;  </p>
 <p><img src="images/os8_install_02.png" width="80%">  </p>
-<h2 id="&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;&#x30C7;&#x30A3;&#x30B9;&#x30AF;&#x306E;&#x30D1;&#x30FC;&#x30C6;&#x30A3;&#x30B7;&#x30E7;&#x30F3;&#x8A2D;&#x5B9A;">&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;&#x30C7;&#x30A3;&#x30B9;&#x30AF;&#x306E;&#x30D1;&#x30FC;&#x30C6;&#x30A3;&#x30B7;&#x30E7;&#x30F3;&#x8A2D;&#x5B9A;</h2>
+<h2 id="&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;&#x30C7;&#x30A3;&#x30B9;&#x30AF;&#x306E;&#x30D1;&#x30FC;&#x30C6;&#x30A3;&#x30B7;&#x30E7;&#x30F3;&#x8A2D;&#x5B9A;">2. &#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;&#x30C7;&#x30A3;&#x30B9;&#x30AF;&#x306E;&#x30D1;&#x30FC;&#x30C6;&#x30A3;&#x30B7;&#x30E7;&#x30F3;&#x8A2D;&#x5B9A;</h2>
 <p>&#x3053;&#x3060;&#x308F;&#x308A;&#x304C;&#x306A;&#x3044;&#x5834;&#x5408;&#x306F;&#x81EA;&#x52D5;&#x69CB;&#x6210;&#x3067;&#x554F;&#x984C;&#x306A;&#x304F;LVM&#x3092;&#x4F5C;&#x6210;&#x3057;&#x3066;&#x304F;&#x308C;&#x308B;  </p>
 <p><img src="images/os8_install_03.png" width="80%">  </p>
 <p>&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;&#x3059;&#x308B;&#x30C7;&#x30A3;&#x30B9;&#x30AF;&#x306E;&#x5BB9;&#x91CF;&#x304C;50GB&#x4EE5;&#x4E0A;&#x3042;&#x308B;&#x5834;&#x5408;&#x306F;&#x6CE8;&#x610F;&#x304C;&#x5FC5;&#x8981;<br>&#x81EA;&#x52D5;&#x69CB;&#x6210;&#x30D1;&#x30FC;&#x30C6;&#x30A3;&#x30B7;&#x30E7;&#x30CB;&#x30F3;&#x30B0;&#x306E;&#x5834;&#x5408;&#x3001;50GB&#x4EE5;&#x4E0A;&#x306E;&#x9818;&#x57DF;&#x304C;&#x3042;&#x308B;&#x3068;50GB&#x6BCE;&#x306B;&#x52DD;&#x624B;&#x306B;&#x30D1;&#x30FC;&#x30C6;&#x30A3;&#x30B7;&#x30E7;&#x30F3;&#x3092;&#x7D30;&#x5206;&#x5316;&#x3057;&#x3066;&#x3057;&#x307E;&#x3046;  </p>
@@ -852,7 +869,7 @@
 /       --&gt; 50GB
 /home   --&gt; &#x6B8B;&#x308A;&#x5BB9;&#x91CF;
 </code></pre><p>&#x6307;&#x5B9A;&#x3057;&#x305F;&#x3044;&#x5834;&#x5408;&#x306F;&#x300C;&#x30AB;&#x30B9;&#x30BF;&#x30E0;&#x300D;&#x3092;&#x9078;&#x629E;&#x3059;&#x308B;  </p>
-<h2 id="&#x6642;&#x523B;&#x8A2D;&#x5B9A;">&#x6642;&#x523B;&#x8A2D;&#x5B9A;</h2>
+<h2 id="&#x6642;&#x523B;&#x8A2D;&#x5B9A;">3. &#x6642;&#x523B;&#x8A2D;&#x5B9A;</h2>
 <p>OS&#x3067;&#x5229;&#x7528;&#x3059;&#x308B;&#x30B7;&#x30B9;&#x30C6;&#x30E0;&#x6642;&#x523B;&#x306E;&#x8A2D;&#x5B9A;&#x3092;&#x884C;&#x3046;<br>&#x30B5;&#x30FC;&#x30D0;&#x306E;&#x5229;&#x7528;&#x74B0;&#x5883;&#x306B;&#x5408;&#x308F;&#x305B;&#x3066;&#x30BE;&#x30FC;&#x30F3;&#x60C5;&#x5831;&#x3092;&#x6307;&#x5B9A;&#x3057;&#x307E;&#x3059;<br>&#x3053;&#x3053;&#x3067;&#x306F;&#x65E5;&#x672C;&#x3067;&#x5229;&#x7528;&#x3057;&#x3066;&#x3044;&#x308B;&#x306E;&#x3067; &#x300C;<strong>&#x30A2;&#x30B8;&#x30A2;/&#x6771;&#x4EAC;</strong>&#x300D; &#x3092;&#x9078;&#x629E;&#x3001;&#x30CD;&#x30C3;&#x30C8;&#x30EF;&#x30FC;&#x30AF;&#x6642;&#x523B;&#x540C;&#x671F;&#x30B5;&#x30FC;&#x30D3;&#x30B9;&#xFF08;NTP&#xFF09;&#x306E;&#x8A2D;&#x5B9A;&#x306F;&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;&#x5F8C;&#x306B;&#x884C;&#x3046;&#x306E;&#x3067;&#x3001;&#x3053;&#x3053;&#x3067;&#x306F;&#x5272;&#x611B;  </p>
 <p>&#x30B7;&#x30B9;&#x30C6;&#x30E0;&#x30AF;&#x30ED;&#x30C3;&#x30AF;&#x306F;&#x30C7;&#x30D5;&#x30A9;&#x30EB;&#x30C8;&#x3067;UTC&#x3092;&#x5229;&#x7528;&#x3059;&#x308B;&#x3088;&#x3046;&#x306A;&#x8A2D;&#x5B9A;&#x753B;&#x9762;&#x306B;&#x306A;&#x3063;&#x3066;&#x3044;&#x308B;<br>Linux&#x306E;&#x6642;&#x523B;&#x8ABF;&#x6574;&#x306B;&#x306F;&#x300C;&#x5730;&#x57DF;&#x6A19;&#x6E96;&#x6642;(LOCAL)&#x300D;&#x3068;&#x300C;&#x5354;&#x5B9A;&#x4E16;&#x754C;&#x6642;(UTC)&#x300D;&#x304C;&#x3042;&#x308B;<br>&#x9078;&#x629E;&#x5730;&#x57DF;&#x306E;&#x8A2D;&#x5B9A;&#x3092;&#x5909;&#x66F4;&#x3059;&#x308B;&#x4E8B;&#x3067;&#x5730;&#x57DF;&#x6A19;&#x6E96;&#x6642;&#x306B;&#x3059;&#x308B;&#x4E8B;&#x3082;&#x53EF;&#x80FD;  </p>
 <ul>
@@ -864,26 +881,26 @@ UTC/GMT&#x304B;&#x3089;&#x53D6;&#x5F97;&#x3057;&#x305F;&#x6642;&#x523B;&#x306B;&
 </li>
 </ul>
 <p>&#x57FA;&#x672C;&#x7684;&#x306B;OS&#x3092;&#x305F;&#x3060;&#x5229;&#x7528;&#x3057;&#x3066;&#x3044;&#x308B;&#x5206;&#x306B;&#x306F;&#x307B;&#x3068;&#x3093;&#x3069;&#x4E92;&#x3044;&#x306E;&#x9055;&#x3044;&#x3092;&#x610F;&#x8B58;&#x3059;&#x308B;&#x3053;&#x3068;&#x306F;&#x306A;&#x3044;&#x304C;&#x3001;<br>&#x518D;&#x8D77;&#x52D5;&#x7B49;&#x306B;&#x3088;&#x308A;&#x30B7;&#x30B9;&#x30C6;&#x30E0;&#x6642;&#x523B;&#x304C;&#x30EA;&#x30BB;&#x30C3;&#x30C8;&#x3055;&#x308C;&#x3001;&#x30CF;&#x30FC;&#x30C9;&#x30A6;&#x30A7;&#x30A2;&#x6642;&#x523B;&#x304B;&#x3089;&#x6642;&#x523B;&#x8A08;&#x7B97;&#x3059;&#x308B;&#x3068;&#x304D;&#x3084;&#x3001;&#x30A2;&#x30D7;&#x30EA;&#x30B1;&#x30FC;&#x30B7;&#x30E7;&#x30F3;&#x304C;OS&#x6642;&#x523B;&#x3092;&#x53D6;&#x5F97;&#x3057;&#x305F;&#x3044;&#x5834;&#x5408;&#x3001;&#x30BF;&#x30A4;&#x30E0;&#x30BE;&#x30FC;&#x30F3;&#x3082;&#x8003;&#x616E;&#x3059;&#x308B;&#x5FC5;&#x8981;&#x304C;&#x3042;&#x308B;&#x306A;&#x3069;&#x5730;&#x57DF;&#x6A19;&#x6E96;&#x6642;&#x306B;&#x3059;&#x308B;&#x30E1;&#x30EA;&#x30C3;&#x30C8;&#x304C;&#x306A;&#x3044;<br>UTC&#x306F;&#x305D;&#x306E;&#x70B9;&#x3092;&#x8003;&#x616E;&#x3059;&#x308B;&#x5FC5;&#x8981;&#x304C;&#x306A;&#x3044;&#x305F;&#x3081;&#x3001;UTC&#x304C;&#x30C7;&#x30D5;&#x30A9;&#x30EB;&#x30C8;&#x3001;&#x63A8;&#x5968;&#x5024;&#x306B;&#x306A;&#x3063;&#x3066;&#x3044;&#x308B;  </p>
-<h2 id="&#x30BD;&#x30D5;&#x30C8;&#x30A6;&#x30A7;&#x30A2;&#x306E;&#x9078;&#x629E;">&#x30BD;&#x30D5;&#x30C8;&#x30A6;&#x30A7;&#x30A2;&#x306E;&#x9078;&#x629E;</h2>
+<h2 id="&#x30BD;&#x30D5;&#x30C8;&#x30A6;&#x30A7;&#x30A2;&#x306E;&#x9078;&#x629E;">4. &#x30BD;&#x30D5;&#x30C8;&#x30A6;&#x30A7;&#x30A2;&#x306E;&#x9078;&#x629E;</h2>
 <p>OS8&#x7CFB;&#x304B;&#x3089;&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;&#x30BF;&#x30A4;&#x30D7;&#x306E;&#x9078;&#x629E;&#x3001;&#x8A73;&#x7D30;&#x30D1;&#x30C3;&#x30B1;&#x30FC;&#x30B8;&#x30B0;&#x30EB;&#x30FC;&#x30D7;&#x306E;&#x9078;&#x629E;&#x304C;&#x5FA9;&#x6D3B;&#x3057;&#x3066;&#x3044;&#x308B;<br>&#x3053;&#x3053;&#x3067;&#x306F;&#x30B5;&#x30FC;&#x30D0;&#x7528;&#x9014;&#x306E;&#x70BA;&#x300C;&#x6700;&#x4F4E;&#x9650;&#x306E;&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;&#x300D;&#x304B;&#x3089;&#x5FC5;&#x8981;&#x306A;&#x30D1;&#x30C3;&#x30B1;&#x30FC;&#x30B8;&#x30B0;&#x30EB;&#x30FC;&#x30D7;&#x306E;&#x307F;&#x3092;&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;&#x3059;&#x308B;&#x3088;&#x3046;&#x306B;&#x6307;&#x5B9A;&#x3059;&#x308B;  </p>
 <blockquote>
 <p><strong>&#x6CE8;&#x610F;</strong><br>&#x65E2;&#x77E5;&#x306E;&#x30D0;&#x30B0;&#x3067;&#x30B0;&#x30E9;&#x30D5;&#x30A3;&#x30AB;&#x30EB;&#x30A4;&#x30F3;&#x30BF;&#x30FC;&#x30D5;&#x30A7;&#x30FC;&#x30B9;&#x69CB;&#x6210;&#x3067;&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;&#x3057;&#x305F;&#x5834;&#x5408;&#x3001;&#x6B63;&#x5E38;&#x306B;&#x8D77;&#x52D5;&#x3057;&#x306A;&#x304F;&#x306A;&#x308B;&#x5834;&#x5408;&#x304C;&#x3042;&#x308B;  </p>
 </blockquote>
-<h2 id="&#x30BB;&#x30AD;&#x30E5;&#x30EA;&#x30C6;&#x30A3;&#x30DD;&#x30EA;&#x30B7;&#x30FC;">&#x30BB;&#x30AD;&#x30E5;&#x30EA;&#x30C6;&#x30A3;&#x30DD;&#x30EA;&#x30B7;&#x30FC;</h2>
+<h2 id="&#x30BB;&#x30AD;&#x30E5;&#x30EA;&#x30C6;&#x30A3;&#x30DD;&#x30EA;&#x30B7;&#x30FC;">5. &#x30BB;&#x30AD;&#x30E5;&#x30EA;&#x30C6;&#x30A3;&#x30DD;&#x30EA;&#x30B7;&#x30FC;</h2>
 <p><img src="images/os8_install_04.png" width="80%">  </p>
 <p>Security Content Automation Protocol (SCAP) &#x6A19;&#x6E96;&#x3067;&#x5B9A;&#x7FA9;&#x3055;&#x308C;&#x305F;&#x5236;&#x9650;&#x304A;&#x3088;&#x3073;&#x63A8;&#x5968;&#x4E8B;&#x9805; (&#x30B3;&#x30F3;&#x30D7;&#x30E9;&#x30A4;&#x30A2;&#x30F3;&#x30B9;&#x30DD;&#x30EA;&#x30B7;&#x30FC;) &#x306B;&#x5F93;&#x3063;&#x3066;&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;&#x3055;&#x308C;&#x305F;&#x30B7;&#x30B9;&#x30C6;&#x30E0;&#x3092;&#x8A2D;&#x5B9A;&#x3059;&#x308B;&#x3053;&#x3068;&#x304C;&#x3067;&#x304D;&#x307E;&#x3059;&#x3002;&#x3053;&#x306E;&#x6A5F;&#x80FD;&#x306F;&#x30A2;&#x30C9;&#x30AA;&#x30F3;&#x304C;&#x63D0;&#x4F9B;&#x3059;&#x308B;&#x3082;&#x306E;&#x3067;&#x3001;&#x3053;&#x308C;&#x306F; Red Hat Enterprise Linux 7.2 &#x4EE5;&#x964D;&#x30C7;&#x30D5;&#x30A9;&#x30EB;&#x30C8;&#x3067;&#x6709;&#x52B9;&#x306B;&#x306A;&#x3063;&#x3066;&#x3044;&#x307E;&#x3059;&#x3002;&#x6709;&#x52B9;&#x306B;&#x306A;&#x3063;&#x3066;&#x3044;&#x308B;&#x3068;&#x3001;&#x3053;&#x306E;&#x6A5F;&#x80FD;&#x306E;&#x63D0;&#x4F9B;&#x306B;&#x5FC5;&#x8981;&#x306A;&#x30D1;&#x30C3;&#x30B1;&#x30FC;&#x30B8;&#x304C;&#x81EA;&#x52D5;&#x3067;&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;&#x3055;&#x308C;&#x307E;&#x3059;&#x3002;&#x305F;&#x3060;&#x3057;&#x3001;&#x30C7;&#x30D5;&#x30A9;&#x30EB;&#x30C8;&#x3067;&#x306F;&#x5F37;&#x5236;&#x3055;&#x308C;&#x308B;&#x30DD;&#x30EA;&#x30B7;&#x30FC;&#x304C;&#x306A;&#x304F;&#x3001;&#x5177;&#x4F53;&#x7684;&#x306B;&#x8A2D;&#x5B9A;&#x3057;&#x306A;&#x3044;&#x3068;&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;&#x4E2D;&#x304A;&#x3088;&#x3073;&#x305D;&#x308C;&#x4EE5;&#x964D;&#x306B;&#x30C1;&#x30A7;&#x30C3;&#x30AF;&#x306F;&#x5B9F;&#x884C;&#x3055;&#x308C;&#x307E;&#x305B;&#x3093;&#x3002;  </p>
 <blockquote>
 <p>&#x53C2;&#x7167;&#xFF1A;<a href="https://access.redhat.com/documentation/ja-jp/red_hat_enterprise_linux/7/html/installation_guide/sect-security-policy-x86" target="_blank">https://access.redhat.com/documentation/ja-jp/red_hat_enterprise_linux/7/html/installation_guide/sect-security-policy-x86</a>  </p>
 </blockquote>
 <p>&#x30C7;&#x30D5;&#x30A9;&#x30EB;&#x30C8;&#x306E;&#x307E;&#x307E;&#x4F55;&#x3082;&#x5909;&#x3048;&#x306A;&#x3044;  </p>
-<h2 id="kdump">KDUMP</h2>
+<h2 id="KDUMP">6. KDUMP</h2>
 <p>&#x7528;&#x9014;&#x306B;&#x3088;&#x308A;&#x6709;&#x52B9;&#xFF0F;&#x7121;&#x52B9;&#x5316;&#x3059;&#x308B;  </p>
-<h2 id="&#x30CD;&#x30C3;&#x30C8;&#x30EF;&#x30FC;&#x30AF;&#x3068;&#x30DB;&#x30B9;&#x30C8;&#x540D;">&#x30CD;&#x30C3;&#x30C8;&#x30EF;&#x30FC;&#x30AF;&#x3068;&#x30DB;&#x30B9;&#x30C8;&#x540D;</h2>
+<h2 id="&#x30CD;&#x30C3;&#x30C8;&#x30EF;&#x30FC;&#x30AF;&#x3068;&#x30DB;&#x30B9;&#x30C8;&#x540D;">7. &#x30CD;&#x30C3;&#x30C8;&#x30EF;&#x30FC;&#x30AF;&#x3068;&#x30DB;&#x30B9;&#x30C8;&#x540D;</h2>
 <p>&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;&#x5B8C;&#x4E86;&#x5F8C;&#x306B;&#x5225;&#x9014;&#x8A2D;&#x5B9A;&#x3059;&#x308B;  </p>
-<h2 id="&#x30B7;&#x30B9;&#x30C6;&#x30E0;&#x306E;&#x76EE;&#x7684;">&#x30B7;&#x30B9;&#x30C6;&#x30E0;&#x306E;&#x76EE;&#x7684;</h2>
+<h2 id="&#x30B7;&#x30B9;&#x30C6;&#x30E0;&#x306E;&#x76EE;&#x7684;">8. &#x30B7;&#x30B9;&#x30C6;&#x30E0;&#x306E;&#x76EE;&#x7684;</h2>
 <p><img src="images/os8_install_05.png" width="80%">  </p>
 <p>&#x7528;&#x9014;&#x306B;&#x5FDC;&#x3058;&#x3066;&#x9078;&#x629E;&#x3059;&#x308B;&#x3001;&#x30C7;&#x30D5;&#x30A9;&#x30EB;&#x30C8;&#x306E;&#x307E;&#x307E;&#x3067;&#x3082;&#x554F;&#x984C;&#x7121;&#x3057;  </p>
-<h2 id="&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;&#x306E;&#x958B;&#x59CB;">&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;&#x306E;&#x958B;&#x59CB;</h2>
+<h2 id="&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;&#x306E;&#x958B;&#x59CB;">9. &#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;&#x306E;&#x958B;&#x59CB;</h2>
 <p>&#x5168;&#x3066;&#x306E;&#x30C1;&#x30A7;&#x30C3;&#x30AF;&#x304C;&#x6B63;&#x5E38;&#x306B;&#x8A2D;&#x5B9A;&#x5F8C;&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;&#x3092;&#x884C;&#x3046;  </p>
 <p><img src="images/os8_install_06.png" width="80%">  </p>
 <p>&#x30D1;&#x30C3;&#x30B1;&#x30FC;&#x30B8;&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;&#x6642;&#x306B;root&#x30D1;&#x30B9;&#x30EF;&#x30FC;&#x30C9;&#x3092;&#x8A2D;&#x5B9A;&#x3059;&#x308B;<br>&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;&#x5B8C;&#x4E86;&#x5F8C;&#x3001;&#x518D;&#x8D77;&#x52D5;&#x3092;&#x4FC3;&#x3055;&#x308C;&#x308B;&#x306E;&#x3067;&#x518D;&#x6A5F;&#x52D5;&#x3057;&#x3066;&#x5B8C;&#x4E86;&#x3068;&#x306A;&#x308B;  </p>
@@ -902,7 +919,7 @@ UTC/GMT&#x304B;&#x3089;&#x53D6;&#x5F97;&#x3057;&#x305F;&#x6642;&#x523B;&#x306B;&
 </tr>
 </tbody>
 </table>
-
+<div id="anchors-navbar"><i class="fa fa-anchor"></i><ul><p><a href="#OS&#x306E;&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;">OS&#x306E;&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;</a></p><li><a href="#&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;&#x8A00;&#x8A9E;&#x306E;&#x9078;&#x629E;">1. &#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;&#x8A00;&#x8A9E;&#x306E;&#x9078;&#x629E;</a></li><li><a href="#&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;&#x30C7;&#x30A3;&#x30B9;&#x30AF;&#x306E;&#x30D1;&#x30FC;&#x30C6;&#x30A3;&#x30B7;&#x30E7;&#x30F3;&#x8A2D;&#x5B9A;">2. &#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;&#x30C7;&#x30A3;&#x30B9;&#x30AF;&#x306E;&#x30D1;&#x30FC;&#x30C6;&#x30A3;&#x30B7;&#x30E7;&#x30F3;&#x8A2D;&#x5B9A;</a></li><li><a href="#&#x6642;&#x523B;&#x8A2D;&#x5B9A;">3. &#x6642;&#x523B;&#x8A2D;&#x5B9A;</a></li><li><a href="#&#x30BD;&#x30D5;&#x30C8;&#x30A6;&#x30A7;&#x30A2;&#x306E;&#x9078;&#x629E;">4. &#x30BD;&#x30D5;&#x30C8;&#x30A6;&#x30A7;&#x30A2;&#x306E;&#x9078;&#x629E;</a></li><li><a href="#&#x30BB;&#x30AD;&#x30E5;&#x30EA;&#x30C6;&#x30A3;&#x30DD;&#x30EA;&#x30B7;&#x30FC;">5. &#x30BB;&#x30AD;&#x30E5;&#x30EA;&#x30C6;&#x30A3;&#x30DD;&#x30EA;&#x30B7;&#x30FC;</a></li><li><a href="#KDUMP">6. KDUMP</a></li><li><a href="#&#x30CD;&#x30C3;&#x30C8;&#x30EF;&#x30FC;&#x30AF;&#x3068;&#x30DB;&#x30B9;&#x30C8;&#x540D;">7. &#x30CD;&#x30C3;&#x30C8;&#x30EF;&#x30FC;&#x30AF;&#x3068;&#x30DB;&#x30B9;&#x30C8;&#x540D;</a></li><li><a href="#&#x30B7;&#x30B9;&#x30C6;&#x30E0;&#x306E;&#x76EE;&#x7684;">8. &#x30B7;&#x30B9;&#x30C6;&#x30E0;&#x306E;&#x76EE;&#x7684;</a></li><li><a href="#&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;&#x306E;&#x958B;&#x59CB;">9. &#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;&#x306E;&#x958B;&#x59CB;</a></li></ul></div><a href="#&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;&#x8A00;&#x8A9E;&#x306E;&#x9078;&#x629E;" id="goTop"><i class="fa fa-arrow-up"></i></a>
                                 
                                 </section>
                             
@@ -945,7 +962,7 @@ UTC/GMT&#x304B;&#x3089;&#x53D6;&#x5F97;&#x3057;&#x305F;&#x6642;&#x523B;&#x306B;&
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"インストール","level":"1.2.2","depth":2,"next":{"title":"サブスクリプション設定","level":"1.2.3","depth":2,"path":"1.manual_install/3.subscribe.md","ref":"1.manual_install/3.subscribe.md","articles":[]},"previous":{"title":"はじめに","level":"1.2.1","depth":2,"path":"1.manual_install/1.premise.md","ref":"1.manual_install/1.premise.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"ja","gitbook":"*"},"file":{"path":"1.manual_install/2.install.md","mtime":"2019-05-10T10:20:23.581Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-06-12T11:58:09.980Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"インストール","level":"1.2.2","depth":2,"next":{"title":"サブスクリプション設定","level":"1.2.3","depth":2,"path":"1.manual_install/3.subscribe.md","ref":"1.manual_install/3.subscribe.md","articles":[]},"previous":{"title":"はじめに","level":"1.2.1","depth":2,"path":"1.manual_install/1.premise.md","ref":"1.manual_install/1.premise.md","articles":[]},"dir":"ltr"},"config":{"plugins":["navigator","-japanese-support","header"],"styles":{"website":"styles/website.css"},"pluginsConfig":{"search":{},"layout":{"headerPath":"layouts/header.html"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"header":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"navigator":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"ja","gitbook":"*","sharing":{"facebook":false,"twitter":false,"google":true,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","twitter","google","weibo","instapaper","vk"]}},"file":{"path":"1.manual_install/2.install.md","mtime":"2019-06-14T05:01:43.782Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-06-14T06:03:18.655Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

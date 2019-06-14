@@ -17,6 +17,10 @@
     
             
                 
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-navigator/plugin.css">
+                
+            
+                
                 <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
                 
             
@@ -237,9 +241,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.3" data-path="2.configure_target.md">
+        <li class="chapter " data-level="1.3.3" data-path="2.configure_systemctl.html">
             
-                <span>
+                <a href="2.configure_systemctl.html">
             
                     
                     SYSTEMDによるサーバ管理
@@ -347,6 +351,19 @@
             
                     
                     rsyslogの設定
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.12" data-path="11.configure_cockpit.html">
+            
+                <a href="11.configure_cockpit.html">
+            
+                    
+                    Cockpitのインストール
             
                 </a>
             
@@ -837,7 +854,7 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="&#x30B7;&#x30B9;&#x30C6;&#x30E0;&#x6642;&#x523B;">&#x30B7;&#x30B9;&#x30C6;&#x30E0;&#x6642;&#x523B;</h1>
-<h2 id="linux&#x30B7;&#x30B9;&#x30C6;&#x30E0;&#x6642;&#x523B;&#x306E;&#x6982;&#x8981;">Linux&#x30B7;&#x30B9;&#x30C6;&#x30E0;&#x6642;&#x523B;&#x306E;&#x6982;&#x8981;</h2>
+<h2 id="Linux&#x30B7;&#x30B9;&#x30C6;&#x30E0;&#x6642;&#x523B;&#x306E;&#x6982;&#x8981;">1. Linux&#x30B7;&#x30B9;&#x30C6;&#x30E0;&#x6642;&#x523B;&#x306E;&#x6982;&#x8981;</h2>
 <p>Linux&#x306E;&#x6642;&#x523B;&#x8ABF;&#x6574;&#x306B;&#x306F;&#x300C;&#x5730;&#x57DF;&#x6A19;&#x6E96;&#x6642;(LOCAL)&#x300D;&#x3068;&#x300C;&#x5354;&#x5B9A;&#x4E16;&#x754C;&#x6642;(UTC)&#x300D;&#x304C;&#x3042;&#x308B;<br>&#x9078;&#x629E;&#x5730;&#x57DF;&#x306E;&#x8A2D;&#x5B9A;&#x3092;&#x5909;&#x66F4;&#x3059;&#x308B;&#x4E8B;&#x3067;&#x5730;&#x57DF;&#x6A19;&#x6E96;&#x6642;&#x306B;&#x3059;&#x308B;&#x4E8B;&#x3082;&#x53EF;&#x80FD;  </p>
 <ul>
 <li><p>&#x5730;&#x57DF;&#x6A19;&#x6E96;&#x6642;(LOCAL)
@@ -850,7 +867,7 @@ UTC/GMT&#x304B;&#x3089;&#x53D6;&#x5F97;&#x3057;&#x305F;&#x6642;&#x523B;&#x306B;&
 <blockquote>
 <p>&#x6700;&#x65B0;&#x306E;&#x30AA;&#x30DA;&#x30EC;&#x30FC;&#x30C6;&#x30A3;&#x30F3;&#x30B0;&#x30B7;&#x30B9;&#x30C6;&#x30E0;&#x306F;&#x3001;2&#x3064;&#x306E;&#x30BF;&#x30A4;&#x30D7;&#x306E;&#x30AF;&#x30ED;&#x30C3;&#x30AF;&#x3092;&#x533A;&#x5225;&#x3057;&#x307E;&#x3059;&#x3002;<br>&#x30EA;&#x30A2;&#x30EB;&#x30BF;&#x30A4;&#x30E0;&#x30AF;&#x30ED;&#x30C3;&#x30AF; (RTC) &#x306F;&#x3001;&#x4E00;&#x822C;&#x306B;&#x30CF;&#x30FC;&#x30C9;&#x30A6;&#x30A7;&#x30A2;&#x30AF;&#x30ED;&#x30C3;&#x30AF; &#x3068;&#x547C;&#x3070;&#x308C;&#x307E;&#x3059;&#x3002;<br>&#x3053;&#x308C;&#x306F;&#x901A;&#x5E38;&#x3001;&#x30B7;&#x30B9;&#x30C6;&#x30E0;&#x30DC;&#x30FC;&#x30C9;&#x4E0A;&#x306E;&#x96C6;&#x7A4D;&#x56DE;&#x8DEF;&#x3067;&#x3001;&#x30AA;&#x30DA;&#x30EC;&#x30FC;&#x30C6;&#x30A3;&#x30F3;&#x30B0;&#x30B7;&#x30B9;&#x30C6;&#x30E0;&#x306E;&#x73FE;&#x884C;&#x72B6;&#x614B;&#x304B;&#x3089;&#x306F;&#x5B8C;&#x5168;&#x306B;&#x72EC;&#x7ACB;&#x3057;&#x3066;&#x304A;&#x308A;&#x3001;&#x30B3;&#x30F3;&#x30D4;&#x30E5;&#x30FC;&#x30BF;&#x30FC;&#x304C;&#x30B7;&#x30E3;&#x30C3;&#x30C8;&#x30C0;&#x30A6;&#x30F3;&#x3057;&#x3066;&#x3082;&#x7A3C;&#x50CD;&#x3057;&#x3066;&#x3044;&#x307E;&#x3059;&#x3002;<br>&#x30B7;&#x30B9;&#x30C6;&#x30E0;&#x30AF;&#x30ED;&#x30C3;&#x30AF;&#x306F;&#x30BD;&#x30D5;&#x30C8;&#x30A6;&#x30A7;&#x30A2;&#x30AF;&#x30ED;&#x30C3;&#x30AF; &#x3068;&#x3082;&#x547C;&#x3070;&#x308C;&#x3001;&#x30AB;&#x30FC;&#x30CD;&#x30EB;&#x304C;&#x7DAD;&#x6301;&#x3057;&#x3001;&#x305D;&#x306E;&#x521D;&#x671F;&#x5024;&#x306F;&#x30EA;&#x30A2;&#x30EB;&#x30BF;&#x30A4;&#x30E0;&#x30AF;&#x30ED;&#x30C3;&#x30AF;&#x306B;&#x57FA;&#x3065;&#x3044;&#x3066;&#x3044;&#x307E;&#x3059;&#x3002;<br>&#x30B7;&#x30B9;&#x30C6;&#x30E0;&#x304C;&#x8D77;&#x52D5;&#x3059;&#x308B;&#x3068;&#x30B7;&#x30B9;&#x30C6;&#x30E0;&#x30AF;&#x30ED;&#x30C3;&#x30AF;&#x306F;&#x521D;&#x671F;&#x5316;&#x3055;&#x308C;&#x3001;&#x30EA;&#x30A2;&#x30EB;&#x30BF;&#x30A4;&#x30E0;&#x30AF;&#x30ED;&#x30C3;&#x30AF;&#x3068;&#x306F;&#x5B8C;&#x5168;&#x306B;&#x72EC;&#x7ACB;&#x3057;&#x305F;&#x3082;&#x306E;&#x306B;&#x306A;&#x308A;&#x307E;&#x3059;&#x3002;<br>&#x30EA;&#x30A2;&#x30EB;&#x30BF;&#x30A4;&#x30E0;&#x30AF;&#x30ED;&#x30C3;&#x30AF;&#x306F;&#x3001;&#x30ED;&#x30FC;&#x30AB;&#x30EB;&#x30BF;&#x30A4;&#x30E0;&#x304B;&#x5354;&#x5B9A;&#x4E16;&#x754C;&#x6642;(UTC)&#x306E;&#x3044;&#x305A;&#x308C;&#x304B;&#x3092;&#x4F7F;&#x3046;&#x3053;&#x3068;&#x304C;&#x3067;&#x304D;&#x307E;&#x3059;&#x3002;<br>&#x30EA;&#x30A2;&#x30EB;&#x30BF;&#x30A4;&#x30E0;&#x30AF;&#x30ED;&#x30C3;&#x30AF;&#x304C; UTC &#x3092;&#x4F7F;&#x3046;&#x3088;&#x3046;&#x306B;&#x8A2D;&#x5B9A;&#x3059;&#x308B;&#x3068;&#x3001;&#x30B7;&#x30B9;&#x30C6;&#x30E0;&#x30AF;&#x30ED;&#x30C3;&#x30AF;&#x306F;&#x4F7F;&#x7528;&#x4E2D;&#x306E;&#x30BF;&#x30A4;&#x30E0;&#x30BE;&#x30FC;&#x30F3;&#x306B;&#x305D;&#x306E;&#x6642;&#x9593;&#x5DEE;&#x3092;&#x9069;&#x7528;&#x3057;&#x3066;&#x8A08;&#x7B97;&#x3055;&#x308C;&#x3001;&#x8A72;&#x5F53;&#x3059;&#x308B;&#x5834;&#x5408;&#x306F;&#x3001;&#x590F;&#x6642;&#x9593;(DST)&#x3082;&#x540C;&#x69D8;&#x306B;&#x8A08;&#x7B97;&#x3055;&#x308C;&#x307E;&#x3059;&#x3002;<br>&#x5BFE;&#x7167;&#x7684;&#x306B;&#x3001;&#x30ED;&#x30FC;&#x30AB;&#x30EB;&#x30BF;&#x30A4;&#x30E0;&#x306F;&#x5B58;&#x5728;&#x5730;&#x306E;&#x30BF;&#x30A4;&#x30E0;&#x30BE;&#x30FC;&#x30F3;&#x306B;&#x304A;&#x3051;&#x308B;&#x5B9F;&#x969B;&#x306E;&#x6642;&#x9593;&#x3092;&#x8868;&#x3057;&#x307E;&#x3059;&#x3002;<br>&#x307B;&#x3068;&#x3093;&#x3069;&#x306E;&#x5834;&#x5408;&#x306F;&#x3001;UTC &#x306E;&#x4F7F;&#x7528;&#x304C;&#x63A8;&#x5968;&#x3055;&#x308C;&#x307E;&#x3059;&#x3002;<br>&#x53C2;&#x8003;&#xFF1A;<a href="https://access.redhat.com/documentation/ja-jp/red_hat_enterprise_linux/7/html/system_administrators_guide/chap-configuring_the_date_and_time" target="_blank">https://access.redhat.com/documentation/ja-jp/red_hat_enterprise_linux/7/html/system_administrators_guide/chap-configuring_the_date_and_time</a>  </p>
 </blockquote>
-<h2 id="&#x30B7;&#x30B9;&#x30C6;&#x30E0;&#x30BF;&#x30A4;&#x30E0;&#x30BE;&#x30FC;&#x30F3;&#x306E;&#x8A2D;&#x5B9A;">&#x30B7;&#x30B9;&#x30C6;&#x30E0;&#x30BF;&#x30A4;&#x30E0;&#x30BE;&#x30FC;&#x30F3;&#x306E;&#x8A2D;&#x5B9A;</h2>
+<h2 id="&#x30B7;&#x30B9;&#x30C6;&#x30E0;&#x30BF;&#x30A4;&#x30E0;&#x30BE;&#x30FC;&#x30F3;&#x306E;&#x8A2D;&#x5B9A;">2. &#x30B7;&#x30B9;&#x30C6;&#x30E0;&#x30BF;&#x30A4;&#x30E0;&#x30BE;&#x30FC;&#x30F3;&#x306E;&#x8A2D;&#x5B9A;</h2>
 <p>&#x30B7;&#x30B9;&#x30C6;&#x30E0;&#x5168;&#x822C;&#x306E;&#x6642;&#x523B;&#x72B6;&#x6CC1;&#x3092;&#x78BA;&#x8A8D;  </p>
 <pre><code># timedatectl
                Local time: &#x706B; 2019-05-14 19:32:43 JST
@@ -867,7 +884,7 @@ System clock synchronized: yes
 </code></pre><blockquote>
 <p>&#x6CE8;&#x610F;<br>timedatectl &#x306F;&#x3001;chrony &#x307E;&#x305F;&#x306F; ntpd &#x306E;&#x30B9;&#x30C6;&#x30FC;&#x30BF;&#x30B9;&#x3078;&#x306E;&#x5909;&#x66F4;&#x3092;&#x5373;&#x5EA7;&#x306B;&#x8A8D;&#x8B58;&#x3057;&#x307E;&#x305B;&#x3093;&#x3002;&#x3053;&#x308C;&#x3089;&#x306E;&#x30C4;&#x30FC;&#x30EB;&#x306E;&#x8A2D;&#x5B9A;&#x307E;&#x305F;&#x306F;&#x30B9;&#x30C6;&#x30FC;&#x30BF;&#x30B9;&#x3092;&#x5909;&#x66F4;&#x3057;&#x305F;&#x5834;&#x5408;&#x306F;&#x3001;&#x4EE5;&#x4E0B;&#x306E;&#x30B3;&#x30DE;&#x30F3;&#x30C9;&#x3092;&#x5B9F;&#x884C;&#x3057;&#x307E;&#x3059;&#x3002;<br><code>systemctl restart systemd-timedated.service</code>  </p>
 </blockquote>
-
+<div id="anchors-navbar"><i class="fa fa-anchor"></i><ul><p><a href="#&#x30B7;&#x30B9;&#x30C6;&#x30E0;&#x6642;&#x523B;">&#x30B7;&#x30B9;&#x30C6;&#x30E0;&#x6642;&#x523B;</a></p><li><a href="#Linux&#x30B7;&#x30B9;&#x30C6;&#x30E0;&#x6642;&#x523B;&#x306E;&#x6982;&#x8981;">1. Linux&#x30B7;&#x30B9;&#x30C6;&#x30E0;&#x6642;&#x523B;&#x306E;&#x6982;&#x8981;</a></li><li><a href="#&#x30B7;&#x30B9;&#x30C6;&#x30E0;&#x30BF;&#x30A4;&#x30E0;&#x30BE;&#x30FC;&#x30F3;&#x306E;&#x8A2D;&#x5B9A;">2. &#x30B7;&#x30B9;&#x30C6;&#x30E0;&#x30BF;&#x30A4;&#x30E0;&#x30BE;&#x30FC;&#x30F3;&#x306E;&#x8A2D;&#x5B9A;</a></li></ul></div><a href="#Linux&#x30B7;&#x30B9;&#x30C6;&#x30E0;&#x6642;&#x523B;&#x306E;&#x6982;&#x8981;" id="goTop"><i class="fa fa-arrow-up"></i></a>
                                 
                                 </section>
                             
@@ -910,7 +927,7 @@ System clock synchronized: yes
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"システム時刻","level":"1.3.5","depth":2,"next":{"title":"cron設定","level":"1.3.6","depth":2,"path":"2.configure/5.configure_cron.md","ref":"2.configure/5.configure_cron.md","articles":[]},"previous":{"title":"システムロケール","level":"1.3.4","depth":2,"path":"2.configure/3.configure_locale.md","ref":"2.configure/3.configure_locale.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"ja","gitbook":"*"},"file":{"path":"2.configure/4.configure_time.md","mtime":"2019-05-14T10:35:12.502Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-06-12T11:58:09.980Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"システム時刻","level":"1.3.5","depth":2,"next":{"title":"cron設定","level":"1.3.6","depth":2,"path":"2.configure/5.configure_cron.md","ref":"2.configure/5.configure_cron.md","articles":[]},"previous":{"title":"システムロケール","level":"1.3.4","depth":2,"path":"2.configure/3.configure_locale.md","ref":"2.configure/3.configure_locale.md","articles":[]},"dir":"ltr"},"config":{"plugins":["navigator","-japanese-support","header"],"styles":{"website":"styles/website.css"},"pluginsConfig":{"search":{},"layout":{"headerPath":"layouts/header.html"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"header":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"navigator":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"ja","gitbook":"*","sharing":{"facebook":false,"twitter":false,"google":true,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","twitter","google","weibo","instapaper","vk"]}},"file":{"path":"2.configure/4.configure_time.md","mtime":"2019-05-14T10:35:12.502Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-06-14T06:03:18.655Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

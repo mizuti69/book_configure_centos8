@@ -17,6 +17,10 @@
     
             
                 
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-navigator/plugin.css">
+                
+            
+                
                 <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
                 
             
@@ -237,9 +241,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.3" data-path="../2.configure/2.configure_target.md">
+        <li class="chapter " data-level="1.3.3" data-path="../2.configure/2.configure_systemctl.html">
             
-                <span>
+                <a href="../2.configure/2.configure_systemctl.html">
             
                     
                     SYSTEMDによるサーバ管理
@@ -347,6 +351,19 @@
             
                     
                     rsyslogの設定
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.12" data-path="../2.configure/11.configure_cockpit.html">
+            
+                <a href="../2.configure/11.configure_cockpit.html">
+            
+                    
+                    Cockpitのインストール
             
                 </a>
             
@@ -836,9 +853,9 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="fsecure-linux-&#x30BB;&#x30AD;&#x30E5;&#x30EA;&#x30C6;&#x30A3;">Fsecure Linux &#x30BB;&#x30AD;&#x30E5;&#x30EA;&#x30C6;&#x30A3;</h1>
+                                <h1 id="Fsecure_Linux_&#x30BB;&#x30AD;&#x30E5;&#x30EA;&#x30C6;&#x30A3;">Fsecure Linux &#x30BB;&#x30AD;&#x30E5;&#x30EA;&#x30C6;&#x30A3;</h1>
 <p>&#x6709;&#x511F;&#x88FD;&#x54C1;Fsecure &#x30B3;&#x30DE;&#x30F3;&#x30C9;&#x30E9;&#x30A4;&#x30F3;&#x30A8;&#x30C7;&#x30A3;&#x30B7;&#x30E7;&#x30F3;&#x306E;&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB; </p>
-<h2 id="&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;">&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;</h2>
+<h2 id="&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;">1. &#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;</h2>
 <p>Fsecure&#x304B;&#x3089;&#x8CFC;&#x5165;&#x3057;&#x305F;&#x30D1;&#x30C3;&#x30B1;&#x30FC;&#x30B8;&#x3092;&#x30B5;&#x30FC;&#x30D0;&#x4E0A;&#x306B;&#x5C55;&#x958B;&#x3057;&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;&#x30B3;&#x30DE;&#x30F3;&#x30C9;&#x3092;&#x5B9F;&#x884C;&#x3057;&#x307E;&#x3059;&#x3002;<br>&#x3044;&#x304F;&#x3064;&#x304B;&#x306E;&#x30E9;&#x30A4;&#x30D6;&#x30E9;&#x30EA;&#x304C;&#x5FC5;&#x8981;&#x306A;&#x306E;&#x3067;&#x306A;&#x3044;&#x5834;&#x5408;&#x306F;&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;&#x3057;&#x3066;&#x304A;&#x304F;&#x3002;  </p>
 <pre><code># yum install glibc-devel kernel-devel ld-linux.so.2
 # tar xzf fsls-11.00.79-rtm.tar.gz
@@ -848,7 +865,7 @@
 <pre><code>30-day evaluation version.
 keycode: **************
 </code></pre><p>&#x8A55;&#x4FA1;&#x7248;&#x3068;&#x3057;&#x3066;&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;&#x3059;&#x308B;&#x5834;&#x5408;&#x306F;&#x4F55;&#x3082;&#x5165;&#x529B;&#x305B;&#x3065;&#x306B;&#x30A8;&#x30F3;&#x30BF;&#x30FC;&#x3057;&#x3066;&#x9032;&#x307F;&#x307E;&#x3059;  </p>
-<h2 id="&#x57FA;&#x672C;&#x8A2D;&#x5B9A;">&#x57FA;&#x672C;&#x8A2D;&#x5B9A;</h2>
+<h2 id="&#x57FA;&#x672C;&#x8A2D;&#x5B9A;">2. &#x57FA;&#x672C;&#x8A2D;&#x5B9A;</h2>
 <p>&#x30B9;&#x30AD;&#x30E3;&#x30F3;&#x6642;&#x8A73;&#x7D30;&#x8A2D;&#x5B9A;&#x3092;&#x884C;&#x3046;  </p>
 <pre><code># vi /etc/opt/f-secure/fssp/fssp.conf
 </code></pre><p>&#x30B9;&#x30AD;&#x30E3;&#x30F3;&#x30BF;&#x30A4;&#x30E0;&#x30A2;&#x30A6;&#x30C8;&#x5024;&#x306E;&#x5909;&#x66F4;&#xFF08;&#x79D2;&#xFF09;  </p>
@@ -857,13 +874,13 @@ keycode: **************
 <pre><code>odsFileSkipLarge 1
 </code></pre><p>&#x30B9;&#x30AD;&#x30E3;&#x30F3;&#x9664;&#x5916;&#x30D1;&#x30B9;&#x306E;&#x6307;&#x5B9A;  </p>
 <pre><code>odsFileExcludedPaths /proc\n/sys\n/usr/local/src/\n/var/opt/f-secure\n/opt/f-secure
-</code></pre><h2 id="&#x30B9;&#x30AD;&#x30E3;&#x30F3;&#x30C6;&#x30B9;&#x30C8;">&#x30B9;&#x30AD;&#x30E3;&#x30F3;&#x30C6;&#x30B9;&#x30C8;</h2>
+</code></pre><h2 id="&#x30B9;&#x30AD;&#x30E3;&#x30F3;&#x30C6;&#x30B9;&#x30C8;">3. &#x30B9;&#x30AD;&#x30E3;&#x30F3;&#x30C6;&#x30B9;&#x30C8;</h2>
 <p>eicar&#x63D0;&#x4F9B;&#x306E;&#x30C6;&#x30B9;&#x30C8;&#x30A6;&#x30A4;&#x30EB;&#x30B9;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x3092;&#x30B5;&#x30FC;&#x30D0;&#x4E0A;&#x306B;&#x914D;&#x7F6E;&#x3057;&#x3066;&#x30B9;&#x30AD;&#x30E3;&#x30F3;&#x3055;&#x305B;&#x307E;&#x3059;<br><a href="http://www.eicar.org/86-0-Intended-use.html" target="_blank">http://www.eicar.org/86-0-Intended-use.html</a>  </p>
 <p>&#x30B9;&#x30AD;&#x30E3;&#x30F3;&#x3092;&#x5B9F;&#x884C;&#x3057;&#x691C;&#x77E5;&#x3055;&#x308C;&#x308B;&#x3053;&#x3068;&#x3092;&#x78BA;&#x8A8D;  </p>
 <pre><code>fsav --auto --action1=disinf --action2=rename /tmp/eicar.txt
-</code></pre><h2 id="&#x30A2;&#x30F3;&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;">&#x30A2;&#x30F3;&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;</h2>
+</code></pre><h2 id="&#x30A2;&#x30F3;&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;">4. &#x30A2;&#x30F3;&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;</h2>
 <pre><code>/opt/f-secure/fssp/sbin/uninstall-fssp
-</code></pre>
+</code></pre><div id="anchors-navbar"><i class="fa fa-anchor"></i><ul><p><a href="#Fsecure_Linux_&#x30BB;&#x30AD;&#x30E5;&#x30EA;&#x30C6;&#x30A3;">Fsecure Linux &#x30BB;&#x30AD;&#x30E5;&#x30EA;&#x30C6;&#x30A3;</a></p><li><a href="#&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;">1. &#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;</a></li><li><a href="#&#x57FA;&#x672C;&#x8A2D;&#x5B9A;">2. &#x57FA;&#x672C;&#x8A2D;&#x5B9A;</a></li><li><a href="#&#x30B9;&#x30AD;&#x30E3;&#x30F3;&#x30C6;&#x30B9;&#x30C8;">3. &#x30B9;&#x30AD;&#x30E3;&#x30F3;&#x30C6;&#x30B9;&#x30C8;</a></li><li><a href="#&#x30A2;&#x30F3;&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;">4. &#x30A2;&#x30F3;&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;</a></li></ul></div><a href="#&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;" id="goTop"><i class="fa fa-arrow-up"></i></a>
                                 
                                 </section>
                             
@@ -906,7 +923,7 @@ keycode: **************
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Fsecure Linux セキュリティ コマンドラインエディション","level":"1.10.2","depth":2,"next":{"title":"sysstatの設定","level":"1.10.3","depth":2,"path":"9.tips/3.tips_sysstat.md","ref":"9.tips/3.tips_sysstat.md","articles":[]},"previous":{"title":"便利ツール","level":"1.10.1","depth":2,"path":"9.tips/1.tips_tools.md","ref":"9.tips/1.tips_tools.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"ja","gitbook":"*"},"file":{"path":"9.tips/2.tips_fsecure.md","mtime":"2018-06-29T06:57:07.237Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-06-12T11:58:09.980Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Fsecure Linux セキュリティ コマンドラインエディション","level":"1.10.2","depth":2,"next":{"title":"sysstatの設定","level":"1.10.3","depth":2,"path":"9.tips/3.tips_sysstat.md","ref":"9.tips/3.tips_sysstat.md","articles":[]},"previous":{"title":"便利ツール","level":"1.10.1","depth":2,"path":"9.tips/1.tips_tools.md","ref":"9.tips/1.tips_tools.md","articles":[]},"dir":"ltr"},"config":{"plugins":["navigator","-japanese-support","header"],"styles":{"website":"styles/website.css"},"pluginsConfig":{"search":{},"layout":{"headerPath":"layouts/header.html"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"header":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"navigator":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"ja","gitbook":"*","sharing":{"facebook":false,"twitter":false,"google":true,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","twitter","google","weibo","instapaper","vk"]}},"file":{"path":"9.tips/2.tips_fsecure.md","mtime":"2018-06-29T06:57:07.237Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-06-14T06:03:18.655Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

@@ -17,6 +17,10 @@
     
             
                 
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-navigator/plugin.css">
+                
+            
+                
                 <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
                 
             
@@ -49,7 +53,7 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="2.configure_target.md" />
+    <link rel="next" href="2.configure_systemctl.html" />
     
     
     <link rel="prev" href="1.network/3.network_security.html" />
@@ -237,9 +241,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.3" data-path="2.configure_target.md">
+        <li class="chapter " data-level="1.3.3" data-path="2.configure_systemctl.html">
             
-                <span>
+                <a href="2.configure_systemctl.html">
             
                     
                     SYSTEMDによるサーバ管理
@@ -347,6 +351,19 @@
             
                     
                     rsyslogの設定
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.12" data-path="11.configure_cockpit.html">
+            
+                <a href="11.configure_cockpit.html">
+            
+                    
+                    Cockpitのインストール
             
                 </a>
             
@@ -836,7 +853,7 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="selinux&#x306E;&#x8A2D;&#x5B9A;">SELinux&#x306E;&#x8A2D;&#x5B9A;</h1>
+                                <h1 id="SELinux&#x306E;&#x8A2D;&#x5B9A;">SELinux&#x306E;&#x8A2D;&#x5B9A;</h1>
 <p>Selinux&#x306F;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x30B7;&#x30B9;&#x30C6;&#x30E0;&#x5358;&#x4F4D;&#x3067;&#x30D1;&#x30FC;&#x30DF;&#x30C3;&#x30B7;&#x30E7;&#x30F3;&#x306E;&#x7BA1;&#x7406;&#x5B9A;&#x7FA9;&#x3092;&#x884C;&#x306A;&#x3044;&#x3088;&#x308A;&#x53B3;&#x5BC6;&#x306B;&#x30BB;&#x30AD;&#x30E5;&#x30EA;&#x30C6;&#x30A3;&#x3092;&#x9AD8;&#x3081;&#x308B;&#x4E8B;&#x304C;&#x3067;&#x304D;&#x308B;<br>Sekinux&#x306B;&#x306F;&#xFF13;&#x3064;&#x306E;&#x30E2;&#x30FC;&#x30C9;&#x304C;&#x3042;&#x308A;&#x3001;  </p>
 <ul>
 <li>Enforcing &#x30E2;&#x30FC;&#x30C9;<br>SELinux &#x30DD;&#x30EA;&#x30B7;&#x30FC;&#x304C;&#x5F37;&#x5236;&#x3055;&#x308C;&#x3001;SELinux &#x30DD;&#x30EA;&#x30B7;&#x30FC;&#x30EB;&#x30FC;&#x30EB;&#x306B;&#x57FA;&#x3065;&#x3044;&#x3066;&#x30A2;&#x30AF;&#x30BB;&#x30B9;&#x304C;&#x62D2;&#x5426;&#x3055;&#x308C;&#x307E;&#x3059;&#x3002;<br>Red Hat Enterprise Linux &#x3067;&#x306F;&#x3001;SELinux &#x304C;&#x30B7;&#x30B9;&#x30C6;&#x30E0;&#x306B;&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;&#x3055;&#x308C;&#x308B;&#x3068;&#x3001;enforcing &#x30E2;&#x30FC;&#x30C9;&#x304C;&#x30C7;&#x30D5;&#x30A9;&#x30EB;&#x30C8;&#x3067;&#x6709;&#x52B9;&#x306B;&#x306A;&#x308A;&#x307E;&#x3059;&#x3002;  </li>
@@ -846,7 +863,7 @@
 <blockquote>
 <p>&#x6CE8;&#x610F;&#xFF1A;<br>Red Hat &#x3067;&#x306F;&#x3001;SELinux &#x3092;&#x6C38;&#x7D9A;&#x7684;&#x306B;&#x7121;&#x52B9;&#x306B;&#x3059;&#x308B;&#x306E;&#x3067;&#x306F;&#x306A;&#x304F;&#x3001;permissive &#x30E2;&#x30FC;&#x30C9;&#x3067;&#x4F7F;&#x7528;&#x3059;&#x308B;&#x3053;&#x3068;&#x3092;&#x5F37;&#x304F;&#x63A8;&#x5968;&#x3057;&#x3066;&#x3044;&#x307E;&#x3059;&#x3002;  </p>
 </blockquote>
-<h2 id="sellnux&#x306E;&#x7121;&#x52B9;&#x5316;">SelLnux&#x306E;&#x7121;&#x52B9;&#x5316;</h2>
+<h2 id="SelLnux&#x306E;&#x7121;&#x52B9;&#x5316;">1. SelLnux&#x306E;&#x7121;&#x52B9;&#x5316;</h2>
 <p>&#x5B8C;&#x5168;&#x306B;&#x7121;&#x52B9;&#x5316;&#x3059;&#x308B;  </p>
 <pre><code># getenforce
 Enforcing
@@ -856,7 +873,7 @@ SELINUX=disabled
 </code></pre><p>&#x5909;&#x66F4;&#x3092;&#x53CD;&#x6620;&#x3055;&#x305B;&#x308B;&#x305F;&#x3081;&#x306B;&#x518D;&#x8D77;&#x52D5;  </p>
 <pre><code># systemctl reboot
 </code></pre><p>&#x518D;&#x79FB;&#x52D5;&#x5F8C;&#x8A2D;&#x5B9A;&#x5024;&#x3092;&#x78BA;&#x8A8D;&#x3057;&#x3066;Disabled&#x306B;&#x306A;&#x3063;&#x3066;&#x3044;&#x308B;&#x4E8B;&#x3092;&#x78BA;&#x8A8D;&#x3059;&#x308B;  </p>
-<h2 id="selinux&#x306E;permissive&#x30E2;&#x30FC;&#x30C9;&#x5316;">SeLinux&#x306E;Permissive&#x30E2;&#x30FC;&#x30C9;&#x5316;</h2>
+<h2 id="SeLinux&#x306E;Permissive&#x30E2;&#x30FC;&#x30C9;&#x5316;">2. SeLinux&#x306E;Permissive&#x30E2;&#x30FC;&#x30C9;&#x5316;</h2>
 <p>&#x6700;&#x4F4E;&#x9650;&#x30ED;&#x30B0;&#x3092;&#x8A18;&#x9332;&#x3059;&#x308B;&#x3088;&#x3046;&#x306B;&#x3057;&#x3001;&#x30B7;&#x30B9;&#x30C6;&#x30E0;&#x3078;&#x306E;&#x602A;&#x3057;&#x3044;&#x30A2;&#x30AF;&#x30BB;&#x30B9;&#x304C;&#x5408;&#x3063;&#x305F;&#x5834;&#x5408;&#x6700;&#x4F4E;&#x9650;&#x8FFD;&#x3048;&#x308B;&#x3088;&#x3046;&#x306B;<br>SElinux&#x306F;&#x6709;&#x52B9;&#x306E;&#x307E;&#x307E;&#x975E;&#x5F37;&#x5236;&#x30E2;&#x30FC;&#x30C9;&#x306B;&#x3057;&#x3066;&#x30ED;&#x30B0;&#x3060;&#x3051;&#x8A18;&#x9332;&#x3055;&#x308C;&#x308B;&#x3088;&#x3046;&#x306B;&#x3059;&#x308B;  </p>
 <pre><code># vim /etc/selinux/config
 SELINUX=permissive
@@ -865,7 +882,7 @@ SELINUX=permissive
 </code></pre><p>&#x518D;&#x79FB;&#x52D5;&#x5F8C;&#x8A2D;&#x5B9A;&#x5024;&#x3092;&#x78BA;&#x8A8D;&#x3057;&#x3066;Disabled&#x306B;&#x306A;&#x3063;&#x3066;&#x3044;&#x308B;&#x4E8B;&#x3092;&#x78BA;&#x8A8D;&#x3059;&#x308B;  </p>
 <p>SeLinux&#x306E;&#x30DD;&#x30EA;&#x30B7;&#x30FC;&#x306B;&#x3088;&#x308A;&#x30D1;&#x30FC;&#x30DF;&#x30C3;&#x30B7;&#x30E7;&#x30F3;&#x304C;&#x62D2;&#x5426;&#x3055;&#x308C;&#x305F;&#x5834;&#x5408;&#x3001;&#x30ED;&#x30B0;&#x306F;Audit&#x30ED;&#x30B0;&#x306B;&#x8A18;&#x9332;&#x3055;&#x308C;&#x307E;&#x3059;<br>&#x5F8C;&#x8FF0;&#x3059;&#x308B;Audit&#x3068;&#x5408;&#x308F;&#x305B;&#x3066;&#x8A2D;&#x5B9A;&#x3092;&#x884C;&#x3063;&#x3066;&#x304A;&#x304F;&#x5FC5;&#x8981;&#x304C;&#x3042;&#x308B;<br>Audit&#x30ED;&#x30B0;&#x306E;AVC&#x30ED;&#x30B0;&#x3092;&#x78BA;&#x8A8D;&#x3059;&#x308B;&#x5834;&#x5408;  </p>
 <pre><code># ausearch -m avc
-</code></pre>
+</code></pre><div id="anchors-navbar"><i class="fa fa-anchor"></i><ul><p><a href="#SELinux&#x306E;&#x8A2D;&#x5B9A;">SELinux&#x306E;&#x8A2D;&#x5B9A;</a></p><li><a href="#SelLnux&#x306E;&#x7121;&#x52B9;&#x5316;">1. SelLnux&#x306E;&#x7121;&#x52B9;&#x5316;</a></li><li><a href="#SeLinux&#x306E;Permissive&#x30E2;&#x30FC;&#x30C9;&#x5316;">2. SeLinux&#x306E;Permissive&#x30E2;&#x30FC;&#x30C9;&#x5316;</a></li></ul></div><a href="#SelLnux&#x306E;&#x7121;&#x52B9;&#x5316;" id="goTop"><i class="fa fa-arrow-up"></i></a>
                                 
                                 </section>
                             
@@ -897,7 +914,7 @@ SELINUX=permissive
                 </a>
                 
                 
-                <a href="2.configure_target.md" class="navigation navigation-next " aria-label="Next page: SYSTEMDによるサーバ管理">
+                <a href="2.configure_systemctl.html" class="navigation navigation-next " aria-label="Next page: SYSTEMDによるサーバ管理">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -908,7 +925,7 @@ SELINUX=permissive
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"SELinuxの設定","level":"1.3.2","depth":2,"next":{"title":"SYSTEMDによるサーバ管理","level":"1.3.3","depth":2,"path":"2.configure/2.configure_target.md","ref":"2.configure/2.configure_target.md","articles":[]},"previous":{"title":"ネットワークセキュリティ設定","level":"1.3.1.3","depth":3,"path":"2.configure/1.network/3.network_security.md","ref":"2.configure/1.network/3.network_security.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"ja","gitbook":"*"},"file":{"path":"2.configure/1.configure_selinux.md","mtime":"2019-05-14T09:54:50.928Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-06-12T11:58:09.980Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"SELinuxの設定","level":"1.3.2","depth":2,"next":{"title":"SYSTEMDによるサーバ管理","level":"1.3.3","depth":2,"path":"2.configure/2.configure_systemctl.md","ref":"2.configure/2.configure_systemctl.md","articles":[]},"previous":{"title":"ネットワークセキュリティ設定","level":"1.3.1.3","depth":3,"path":"2.configure/1.network/3.network_security.md","ref":"2.configure/1.network/3.network_security.md","articles":[]},"dir":"ltr"},"config":{"plugins":["navigator","-japanese-support","header"],"styles":{"website":"styles/website.css"},"pluginsConfig":{"search":{},"layout":{"headerPath":"layouts/header.html"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"header":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"navigator":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"ja","gitbook":"*","sharing":{"facebook":false,"twitter":false,"google":true,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","twitter","google","weibo","instapaper","vk"]}},"file":{"path":"2.configure/1.configure_selinux.md","mtime":"2019-05-14T09:54:50.928Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-06-14T06:03:18.655Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

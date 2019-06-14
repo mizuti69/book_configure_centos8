@@ -17,6 +17,10 @@
     
             
                 
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-navigator/plugin.css">
+                
+            
+                
                 <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
                 
             
@@ -237,9 +241,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.3" data-path="../2.configure/2.configure_target.md">
+        <li class="chapter " data-level="1.3.3" data-path="../2.configure/2.configure_systemctl.html">
             
-                <span>
+                <a href="../2.configure/2.configure_systemctl.html">
             
                     
                     SYSTEMDによるサーバ管理
@@ -347,6 +351,19 @@
             
                     
                     rsyslogの設定
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.12" data-path="../2.configure/11.configure_cockpit.html">
+            
+                <a href="../2.configure/11.configure_cockpit.html">
+            
+                    
+                    Cockpitのインストール
             
                 </a>
             
@@ -836,8 +853,8 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="postfix&#x306E;&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;">Postfix&#x306E;&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;</h1>
-<h2 id="&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;">&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;</h2>
+                                <h1 id="Postfix&#x306E;&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;">Postfix&#x306E;&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;</h1>
+<h2 id="&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;">1. &#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;</h2>
 <p>&#x6A19;&#x6E96;&#x3067;&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;&#x3055;&#x308C;&#x3066;&#x3044;&#x308B;&#x5834;&#x5408;&#x304C;&#x591A;&#x3044;&#x3067;&#x3059;&#x304C;&#x3001;&#x7121;&#x3044;&#x5834;&#x5408;&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;  </p>
 <pre><code># yum install postfix
 </code></pre><p>&#x4ED6;&#x306E;SMTP&#x30B5;&#x30FC;&#x30D2;&#x30B9;&#x304C;&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;&#x3055;&#x308C;&#x3066;&#x3044;&#x305F;&#x5834;&#x5408;&#x3001;&#x30C7;&#x30D5;&#x30A9;&#x30EB;&#x30C8;MTA&#x3092;&#x5207;&#x308A;&#x66FF;&#x3048;&#x3066;&#x304A;&#x304F;  </p>
@@ -852,7 +869,7 @@ Enter &#x3092;&#x62BC;&#x3057;&#x3066;&#x73FE;&#x5728;&#x306E;&#x9078;&#x629E; [
 </code></pre><p>&#x81EA;&#x52D5;&#x8D77;&#x52D5;&#x8A2D;&#x5B9A;  </p>
 <pre><code># systemctl start postfix
 # systemctl enable postfix
-</code></pre><h2 id="postfix&#x306E;&#x57FA;&#x672C;&#x8A2D;&#x5B9A;">Postfix&#x306E;&#x57FA;&#x672C;&#x8A2D;&#x5B9A;</h2>
+</code></pre><h2 id="Postfix&#x306E;&#x57FA;&#x672C;&#x8A2D;&#x5B9A;">2. Postfix&#x306E;&#x57FA;&#x672C;&#x8A2D;&#x5B9A;</h2>
 <p>&#x30B5;&#x30FC;&#x30D0;&#x7528;&#x9014;&#x3001;&#x30AF;&#x30E9;&#x30A4;&#x30A2;&#x30F3;&#x30C8;&#x7528;&#x9014;&#x3067;&#x3042;&#x3063;&#x3066;&#x3082;&#x540C;&#x69D8;&#x306B;&#x57FA;&#x672C;&#x8A2D;&#x5B9A;&#x3092;&#x884C;&#x3046;  </p>
 <pre><code># vim /etc/postfix/main.cf
 </code></pre><ul>
@@ -944,7 +961,7 @@ SMTP AUTH&#x306B;&#x6210;&#x529F;&#x3057;&#x3066;&#x3044;&#x306A;&#x3044;&#x5834
 </ul>
 <p>&#x4FE1;&#x983C;&#x3055;&#x308C;&#x3066;&#x3044;&#x308B;&#x30CD;&#x30C3;&#x30C8;&#x30EF;&#x30FC;&#x30AF;&#x304B;&#x3089;&#x306E;&#x30E1;&#x30FC;&#x30EB;&#x306F;&#x57FA;&#x672C;&#x7684;&#x306B;&#x8A31;&#x53EF;&#x3057;&#x3001;<br>&#x4FE1;&#x983C;&#x3067;&#x304D;&#x306A;&#x3044;&#x30B5;&#x30FC;&#x30D0;&#x304B;&#x3089;&#x306E;&#x8981;&#x6C42;&#x306F;&#x62D2;&#x5426;<br>&#x305D;&#x308C;&#x4EE5;&#x5916;&#x306F;&#x51E6;&#x7406;  </p>
 <pre><code>smtpd_etrn_restrictions = permit_mynetworks, reject_invalid_hostname
-</code></pre>
+</code></pre><div id="anchors-navbar"><i class="fa fa-anchor"></i><ul><p><a href="#Postfix&#x306E;&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;">Postfix&#x306E;&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;</a></p><li><a href="#&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;">1. &#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;</a></li><li><a href="#Postfix&#x306E;&#x57FA;&#x672C;&#x8A2D;&#x5B9A;">2. Postfix&#x306E;&#x57FA;&#x672C;&#x8A2D;&#x5B9A;</a></li></ul></div><a href="#&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;" id="goTop"><i class="fa fa-arrow-up"></i></a>
                                 
                                 </section>
                             
@@ -987,7 +1004,7 @@ SMTP AUTH&#x306B;&#x6210;&#x529F;&#x3057;&#x3066;&#x3044;&#x306A;&#x3044;&#x5834
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Postfixのインストール","level":"1.9.1","depth":2,"next":{"title":"メールサーバ用の設定","level":"1.9.2","depth":2,"path":"8.smtp/2.smtp_server.md","ref":"8.smtp/2.smtp_server.md","articles":[]},"previous":{"title":"SMTPサーバ設定","level":"1.9","depth":1,"path":"8.smtp/index.md","ref":"8.smtp/index.md","articles":[{"title":"Postfixのインストール","level":"1.9.1","depth":2,"path":"8.smtp/1.smtp_config.md","ref":"8.smtp/1.smtp_config.md","articles":[]},{"title":"メールサーバ用の設定","level":"1.9.2","depth":2,"path":"8.smtp/2.smtp_server.md","ref":"8.smtp/2.smtp_server.md","articles":[]},{"title":"メールクライアント・転送用の設定","level":"1.9.3","depth":2,"path":"8.smtp/3.smtp_client.md","ref":"8.smtp/3.smtp_client.md","articles":[]},{"title":"送信制限","level":"1.9.4","depth":2,"path":"8.smtp/4.smtp_transport.md","ref":"8.smtp/4.smtp_transport.md","articles":[]},{"title":"Postfix メールアドレス制御","level":"1.9.5","depth":2,"path":"8.smtp/5.smtp_address_limit.md","ref":"8.smtp/5.smtp_address_limit.md","articles":[]},{"title":"Postfix接続数制限","level":"1.9.6","depth":2,"path":"8.smtp/6.smtp_client_limit.md","ref":"8.smtp/6.smtp_client_limit.md","articles":[]},{"title":"ブラックリスト制限","level":"1.9.7","depth":2,"path":"8.smtp/7.smtp_blacklist.md","ref":"8.smtp/7.smtp_blacklist.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"ja","gitbook":"*"},"file":{"path":"8.smtp/1.smtp_config.md","mtime":"2018-06-29T07:22:37.609Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-06-12T11:58:09.980Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Postfixのインストール","level":"1.9.1","depth":2,"next":{"title":"メールサーバ用の設定","level":"1.9.2","depth":2,"path":"8.smtp/2.smtp_server.md","ref":"8.smtp/2.smtp_server.md","articles":[]},"previous":{"title":"SMTPサーバ設定","level":"1.9","depth":1,"path":"8.smtp/index.md","ref":"8.smtp/index.md","articles":[{"title":"Postfixのインストール","level":"1.9.1","depth":2,"path":"8.smtp/1.smtp_config.md","ref":"8.smtp/1.smtp_config.md","articles":[]},{"title":"メールサーバ用の設定","level":"1.9.2","depth":2,"path":"8.smtp/2.smtp_server.md","ref":"8.smtp/2.smtp_server.md","articles":[]},{"title":"メールクライアント・転送用の設定","level":"1.9.3","depth":2,"path":"8.smtp/3.smtp_client.md","ref":"8.smtp/3.smtp_client.md","articles":[]},{"title":"送信制限","level":"1.9.4","depth":2,"path":"8.smtp/4.smtp_transport.md","ref":"8.smtp/4.smtp_transport.md","articles":[]},{"title":"Postfix メールアドレス制御","level":"1.9.5","depth":2,"path":"8.smtp/5.smtp_address_limit.md","ref":"8.smtp/5.smtp_address_limit.md","articles":[]},{"title":"Postfix接続数制限","level":"1.9.6","depth":2,"path":"8.smtp/6.smtp_client_limit.md","ref":"8.smtp/6.smtp_client_limit.md","articles":[]},{"title":"ブラックリスト制限","level":"1.9.7","depth":2,"path":"8.smtp/7.smtp_blacklist.md","ref":"8.smtp/7.smtp_blacklist.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["navigator","-japanese-support","header"],"styles":{"website":"styles/website.css"},"pluginsConfig":{"search":{},"layout":{"headerPath":"layouts/header.html"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"header":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"navigator":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"ja","gitbook":"*","sharing":{"facebook":false,"twitter":false,"google":true,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","twitter","google","weibo","instapaper","vk"]}},"file":{"path":"8.smtp/1.smtp_config.md","mtime":"2018-06-29T07:22:37.609Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-06-14T06:03:18.655Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

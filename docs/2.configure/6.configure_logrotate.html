@@ -17,6 +17,10 @@
     
             
                 
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-navigator/plugin.css">
+                
+            
+                
                 <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
                 
             
@@ -237,9 +241,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.3" data-path="2.configure_target.md">
+        <li class="chapter " data-level="1.3.3" data-path="2.configure_systemctl.html">
             
-                <span>
+                <a href="2.configure_systemctl.html">
             
                     
                     SYSTEMDによるサーバ管理
@@ -347,6 +351,19 @@
             
                     
                     rsyslogの設定
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.12" data-path="11.configure_cockpit.html">
+            
+                <a href="11.configure_cockpit.html">
+            
+                    
+                    Cockpitのインストール
             
                 </a>
             
@@ -837,7 +854,7 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="&#x30ED;&#x30B0;&#x30ED;&#x30FC;&#x30C6;&#x30FC;&#x30C8;">&#x30ED;&#x30B0;&#x30ED;&#x30FC;&#x30C6;&#x30FC;&#x30C8;</h1>
-<h2 id="logrotated&#x306E;&#x8A2D;&#x5B9A;">logrotated&#x306E;&#x8A2D;&#x5B9A;</h2>
+<h2 id="logrotated&#x306E;&#x8A2D;&#x5B9A;">1. logrotated&#x306E;&#x8A2D;&#x5B9A;</h2>
 <p>CentOS /Redhat &#x3067;&#x306F;OS&#x3084;&#x30B7;&#x30B9;&#x30C6;&#x30E0;&#x306E;&#x30ED;&#x30B0;&#x7BA1;&#x7406;&#x30C4;&#x30FC;&#x30EB;&#x3068;&#x3057;&#x3066;logrotated&#x304C;&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;&#x3055;&#x308C;&#x3066;&#x3044;&#x308B;<br>&#x74B0;&#x5883;&#x3084;&#x5229;&#x7528;&#x7528;&#x9014;&#x306B;&#x3042;&#x308F;&#x305B;&#x9069;&#x5207;&#x306A;&#x30ED;&#x30FC;&#x30C6;&#x30FC;&#x30C8;&#x9593;&#x9694;&#x3001;&#x4FDD;&#x6301;&#x671F;&#x9593;&#x3092;&#x8A2D;&#x5B9A;&#x3059;&#x308B;  </p>
 <p><strong>&#x30ED;&#x30FC;&#x30C6;&#x30FC;&#x30C8;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x306E;&#x4FDD;&#x6301;&#x4E16;&#x4EE3;&#x6570;</strong>  </p>
 <pre><code># vim /etc/logrotate.conf
@@ -852,9 +869,9 @@ dateext
 </code></pre><p><strong>&#x30ED;&#x30FC;&#x30C6;&#x30FC;&#x30C8;&#x5F8C;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x306E;&#x5727;&#x7E2E;&#x51E6;&#x7406;&#x6709;&#x7121;</strong>  </p>
 <pre><code># uncomment this if you want your log files compressed
 compress
-</code></pre><h2 id="&#x30B5;&#x30FC;&#x30D3;&#x30B9;&#x6BCE;&#x306E;&#x30ED;&#x30B0;&#x30ED;&#x30FC;&#x30C6;&#x30FC;&#x30C8;&#x8A2D;&#x5B9A;">&#x30B5;&#x30FC;&#x30D3;&#x30B9;&#x6BCE;&#x306E;&#x30ED;&#x30B0;&#x30ED;&#x30FC;&#x30C6;&#x30FC;&#x30C8;&#x8A2D;&#x5B9A;</h2>
+</code></pre><h2 id="&#x30B5;&#x30FC;&#x30D3;&#x30B9;&#x6BCE;&#x306E;&#x30ED;&#x30B0;&#x30ED;&#x30FC;&#x30C6;&#x30FC;&#x30C8;&#x8A2D;&#x5B9A;">2. &#x30B5;&#x30FC;&#x30D3;&#x30B9;&#x6BCE;&#x306E;&#x30ED;&#x30B0;&#x30ED;&#x30FC;&#x30C6;&#x30FC;&#x30C8;&#x8A2D;&#x5B9A;</h2>
 <p>&#x30B7;&#x30B9;&#x30C6;&#x30E0;&#x306B;&#x95A2;&#x3059;&#x308B;&#x30ED;&#x30B0;&#x306F;&#x30C7;&#x30D5;&#x30A9;&#x30EB;&#x30C8;&#x3067;&#x30ED;&#x30FC;&#x30C6;&#x30FC;&#x30C8;&#x3055;&#x308C;&#x308B;&#x3088;&#x3046;&#x8A2D;&#x5B9A;&#x3055;&#x308C;&#x3066;&#x3044;&#x308B;&#x304C;&#x4E0D;&#x8981;&#x306A;&#x3082;&#x306E;&#x3082;&#x3042;&#x308B;&#x306E;&#x3067;&#x4FEE;&#x6B63;&#x3059;&#x308B;  </p>
-<h3 id="syslog">syslog</h3>
+<h3 id="syslog">2.1. syslog</h3>
 <p>&#x30C7;&#x30D5;&#x30A9;&#x30EB;&#x30C8;&#x3067;&#x306F;&#x30ED;&#x30B0;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x304C;&#x7A7A;&#x3067;&#x3082;&#x30ED;&#x30FC;&#x30C6;&#x30FC;&#x30C8;&#x3059;&#x308B;&#x3088;&#x3046;&#x306B;&#x306A;&#x3063;&#x3066;&#x304A;&#x308A;&#x3001;<br>&#x30B4;&#x30DF;&#x30ED;&#x30B0;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x304C;&#x4F5C;&#x6210;&#x3055;&#x308C;&#x3066;&#x3057;&#x307E;&#x3046;&#x306E;&#x3067;&#x7A7A;&#x306E;&#x30ED;&#x30B0;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x306F;&#x30ED;&#x30FC;&#x30C6;&#x30FC;&#x30C8;&#x3057;&#x306A;&#x3044;&#x3088;&#x3046;&#x4FEE;&#x6B63;  </p>
 <pre><code># vim /etc/logrotate.d/syslog
 
@@ -871,7 +888,7 @@ compress
         /bin/kill -HUP `cat /var/run/syslogd.pid 2&gt; /dev/null` 2&gt; /dev/null || true
     endscript
 }
-</code></pre><h3 id="bootlog">bootlog</h3>
+</code></pre><h3 id="bootlog">2.2. bootlog</h3>
 <p>&#x7A7A;&#x306E;&#x5834;&#x5408;&#x306F;&#x30ED;&#x30FC;&#x30C6;&#x30FC;&#x30C8;&#x3057;&#x306A;&#x3044;&#x3088;&#x3046;&#x306B;&#x4FEE;&#x6B63;  </p>
 <pre><code># vm /etc/logrotate.d/bootlog
 
@@ -883,7 +900,7 @@ compress
     copytruncate
     rotate 7
 }
-</code></pre>
+</code></pre><div id="anchors-navbar"><i class="fa fa-anchor"></i><ul><p><a href="#&#x30ED;&#x30B0;&#x30ED;&#x30FC;&#x30C6;&#x30FC;&#x30C8;">&#x30ED;&#x30B0;&#x30ED;&#x30FC;&#x30C6;&#x30FC;&#x30C8;</a></p><li><a href="#logrotated&#x306E;&#x8A2D;&#x5B9A;">1. logrotated&#x306E;&#x8A2D;&#x5B9A;</a></li><li><a href="#&#x30B5;&#x30FC;&#x30D3;&#x30B9;&#x6BCE;&#x306E;&#x30ED;&#x30B0;&#x30ED;&#x30FC;&#x30C6;&#x30FC;&#x30C8;&#x8A2D;&#x5B9A;">2. &#x30B5;&#x30FC;&#x30D3;&#x30B9;&#x6BCE;&#x306E;&#x30ED;&#x30B0;&#x30ED;&#x30FC;&#x30C6;&#x30FC;&#x30C8;&#x8A2D;&#x5B9A;</a></li><ul><li><a href="#syslog">2.1. syslog</a></li><li><a href="#bootlog">2.2. bootlog</a></li></ul></ul></div><a href="#logrotated&#x306E;&#x8A2D;&#x5B9A;" id="goTop"><i class="fa fa-arrow-up"></i></a>
                                 
                                 </section>
                             
@@ -926,7 +943,7 @@ compress
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"ログローテート","level":"1.3.7","depth":2,"next":{"title":"カーネルパニック対応","level":"1.3.8","depth":2,"path":"2.configure/7.configure_panic.md","ref":"2.configure/7.configure_panic.md","articles":[]},"previous":{"title":"cron設定","level":"1.3.6","depth":2,"path":"2.configure/5.configure_cron.md","ref":"2.configure/5.configure_cron.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"ja","gitbook":"*"},"file":{"path":"2.configure/6.configure_logrotate.md","mtime":"2019-05-14T11:18:09.604Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-06-12T11:58:09.980Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"ログローテート","level":"1.3.7","depth":2,"next":{"title":"カーネルパニック対応","level":"1.3.8","depth":2,"path":"2.configure/7.configure_panic.md","ref":"2.configure/7.configure_panic.md","articles":[]},"previous":{"title":"cron設定","level":"1.3.6","depth":2,"path":"2.configure/5.configure_cron.md","ref":"2.configure/5.configure_cron.md","articles":[]},"dir":"ltr"},"config":{"plugins":["navigator","-japanese-support","header"],"styles":{"website":"styles/website.css"},"pluginsConfig":{"search":{},"layout":{"headerPath":"layouts/header.html"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"header":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"navigator":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"ja","gitbook":"*","sharing":{"facebook":false,"twitter":false,"google":true,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","twitter","google","weibo","instapaper","vk"]}},"file":{"path":"2.configure/6.configure_logrotate.md","mtime":"2019-05-14T11:18:09.604Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-06-14T06:03:18.655Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
