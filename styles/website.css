@@ -19,8 +19,15 @@ pre {
   font-family: Consolas;
 }
 
-.markdown-section pre>code {
+.markdown-section h2 {
+  border-bottom: dotted 1px rgba(0,0,0,.54);
+}
+
+.markdown-section code {
   font-size: 14px;  
+  font-family: "Noto Sans JP";
+  background-color: #e4e4e4;
+  padding: 1px 5px;
 }
 
 .markdown-section pre {
