@@ -1,5 +1,13 @@
-body,h1,h2,h3,ul,p,li {
-  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Hiragino Kaku Gothic ProN,"メイリオ",meiryo,sans-serif;
+@import url(http://fonts.googleapis.com/earlyaccess/notosansjp.css);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:600,800);
+@import url(https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
+
+body,h1,h2,h3,ul,p,li,.book.font-family-1{
+  font-family: "Noto Sans JP",-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Hiragino Kaku Gothic ProN,"メイリオ",meiryo,sans-serif;
+}
+
+.book-body {
+  background: #f8fbf8;
 }
 
 h1 {
@@ -7,33 +15,42 @@ h1 {
 }
 
 pre {
-  font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;
+  /*font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace; */
+  font-family: Consolas;
 }
 
 .markdown-section pre>code {
-  font-size: 12px;  
+  font-size: 14px;  
 }
 
 .markdown-section pre {
   margin-left: 10px;
-  background: #364549;
+  background: #222;
   color: #e3e3e3;
 }
 
 .markdown-section p,pre {
-  font-size: 13px;
+  font-size: 15px;
   margin-left: 10px;
 }
 
 .markdown-section ul,li {
-  font-size: 13px;
+  font-size: 15px;
 }
 
 .markdown-section table,th {
-  font-size: 13px;
+  font-size: 15px;
+}
+
+.markdown-section blockquote {
+  margin-left: 10px;
 }
 
 .book-summary {
   font-size: 12px;
-  background: #FFFFFF;
+  background: #222;
+}
+.book-summary ul.summary li a {
+  color: #e3e3e3;
+  font-size: 12px;
 }

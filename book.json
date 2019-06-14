@@ -1,6 +1,27 @@
 {
-    "language": "ja",
+  "language": "ja",
     "styles": {
       "website": "styles/website.css"
+    },
+  "plugins": [
+    "navigator",
+    "-japanese-support",
+    "header"
+  ],
+  "pluginsConfig": {
+    "layout": {
+      "headerPath" : "layouts/header.html"
     }
+  },
+  "sharing": {
+    "facebook": false,
+    "twitter": false,
+    "google": true,
+    "weibo": false,
+    "instapaper": false,
+    "vk": false,
+    "all": [
+      "facebook", "twitter", "google", "weibo", "instapaper", "vk"
+    ]
+  }
 }
