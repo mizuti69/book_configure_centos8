@@ -1,4 +1,6 @@
 {
+  "title": "Linux config manual",
+  "description": "Linux, CentOS, Redhat, Manual, サーバ",
   "language": "ja",
     "styles": {
       "website": "styles/website.css"

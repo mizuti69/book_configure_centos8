@@ -1,6 +1,6 @@
 # Summary
 
-* [Title](./README.md)
+* [Redhat8 / CentOS8 設定手順書](./README.md)
 * [OSのインストール](1.manual_install/index.md)
   * [はじめに](1.manual_install/1.premise.md)
   * [インストール](1.manual_install/2.install.md)
