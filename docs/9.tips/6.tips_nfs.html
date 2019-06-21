@@ -858,8 +858,8 @@
 </code></pre><h3 id="&#x5171;&#x6709;&#x30C7;&#x30A3;&#x30EC;&#x30AF;&#x30C8;&#x30EA;&#x3092;&#x767B;&#x9332;">1.2. &#x5171;&#x6709;&#x30C7;&#x30A3;&#x30EC;&#x30AF;&#x30C8;&#x30EA;&#x3092;&#x767B;&#x9332;</h3>
 <p>NFS&#x5171;&#x6709;&#x3057;&#x305F;&#x3044;&#x30C7;&#x30A3;&#x30EC;&#x30AF;&#x30C8;&#x30EA;&#x3001;&#x63A5;&#x7D9A;&#x5143;&#x3001;&#x6A29;&#x9650;&#x3092;&#x8A2D;&#x5B9A;  </p>
 <pre><code># vim /etc/exports
-/data02 10.128.59.107(rw,async,no_root_squash)
-/data02 10.128.59.108(rw,async,no_root_squash)
+/data02 &lt;ipaddress&gt;(rw,async,no_root_squash)
+/data02 &lt;ipaddress&gt;(rw,async,no_root_squash)
 </code></pre><p>NFS&#x30B5;&#x30FC;&#x30D0;&#x3092;&#x8D77;&#x52D5;  </p>
 <pre><code># systemctl start nfs-server
 # systemctl enable nfs-server
@@ -872,7 +872,7 @@
 <pre><code># yum install nfs-utils
 </code></pre><p>&#x30DE;&#x30A6;&#x30F3;&#x30C8;&#x8A2D;&#x5B9A;  </p>
 <pre><code># vim /etc/fstab
-10.128.59.104:/data02 /data02                    nfs     rw,_netdev,soft,timeo=300,retrans=2 0 0
+&lt;ipaddress&gt;:/data02 /data02                    nfs     rw,_netdev,soft,timeo=300,retrans=2 0 0
 </code></pre><p>&#x30DE;&#x30A6;&#x30F3;&#x30C8;  </p>
 <pre><code># mount /data02
 </code></pre><p><code>/etc/fstab</code>&#x306B;&#x8A18;&#x8F09;&#x3057;&#x3066;&#x304A;&#x3051;&#x3070;OS&#x518D;&#x8D77;&#x52D5;&#x6642;&#x306B;&#x3082;&#x81EA;&#x52D5;&#x3067;&#x30DE;&#x30A6;&#x30F3;&#x30C8;&#x3057;&#x3066;&#x304F;&#x308C;&#x308B;  </p>
@@ -915,7 +915,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"NFS設定","level":"1.10.6","depth":2,"previous":{"title":"パスワード有効期限の設定","level":"1.10.5","depth":2,"path":"9.tips/5.tips_chage.md","ref":"9.tips/5.tips_chage.md","articles":[]},"dir":"ltr"},"config":{"plugins":["navigator","-japanese-support","-header"],"styles":{"website":"styles/website.css"},"pluginsConfig":{"layout":{"headerPath":"layouts/header.html"},"navigator":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Linux config manual","language":"ja","gitbook":"*","sharing":{"facebook":false,"twitter":false,"google":true,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","twitter","google","weibo","instapaper","vk"]},"description":"Linux, CentOS, Redhat, Manual, サーバ"},"file":{"path":"9.tips/6.tips_nfs.md","mtime":"2018-10-15T13:22:27.694Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-06-21T04:25:45.061Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"NFS設定","level":"1.10.6","depth":2,"previous":{"title":"パスワード有効期限の設定","level":"1.10.5","depth":2,"path":"9.tips/5.tips_chage.md","ref":"9.tips/5.tips_chage.md","articles":[]},"dir":"ltr"},"config":{"plugins":["navigator","-japanese-support","-header"],"styles":{"website":"styles/website.css"},"pluginsConfig":{"layout":{"headerPath":"layouts/header.html"},"navigator":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Linux config manual","language":"ja","gitbook":"*","sharing":{"facebook":false,"twitter":false,"google":true,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","twitter","google","weibo","instapaper","vk"]},"description":"Linux, CentOS, Redhat, Manual, サーバ"},"file":{"path":"9.tips/6.tips_nfs.md","mtime":"2019-06-21T04:34:55.549Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-06-21T04:35:14.563Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

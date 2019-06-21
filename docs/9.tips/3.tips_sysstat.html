@@ -858,22 +858,13 @@
 <p>&#x591A;&#x304F;&#x306E;&#x5834;&#x5408;&#x30C7;&#x30D5;&#x30A9;&#x30EB;&#x30C8;&#x3067;&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;&#x3055;&#x308C;&#x3066;&#x3044;&#x308B;&#x4E8B;&#x304C;&#x591A;&#x3044;&#x304C;&#x3001;&#x306A;&#x3044;&#x5834;&#x5408;&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;  </p>
 <pre><code># yum install sysstat
 </code></pre><h2 id="&#x8A2D;&#x5B9A;">2. &#x8A2D;&#x5B9A;</h2>
-<ul>
-<li>&#x30ED;&#x30B0;&#x4FDD;&#x6709;&#x671F;&#x9593;  </li>
-</ul>
-<p>sysstat&#x30ED;&#x30B0;&#x306E;&#x4FDD;&#x6301;&#x671F;&#x9593;&#x3092;&#x8A2D;&#x5B9A;<br>30&#x65E5;&#x3092;&#x8D8A;&#x3048;&#x308B;&#x5834;&#x5408;&#x3001;&#x6708;&#x3054;&#x3068;&#x306B;&#x30ED;&#x30B0;&#x306E;&#x51FA;&#x529B;&#x5148;&#x304C;&#x7D30;&#x5206;&#x5316;&#x3055;&#x308C;&#x307E;&#x3059;  </p>
+<p><i class="fas fa-check-circle">&#x30ED;&#x30B0;&#x4FDD;&#x6709;&#x671F;&#x9593;</i><br>sysstat &#x30ED;&#x30B0;&#x306E;&#x4FDD;&#x6301;&#x671F;&#x9593;&#x3092;&#x8A2D;&#x5B9A;<br>30&#x65E5;&#x3092;&#x8D8A;&#x3048;&#x308B;&#x5834;&#x5408;&#x3001;&#x6708;&#x3054;&#x3068;&#x306B;&#x30ED;&#x30B0;&#x306E;&#x51FA;&#x529B;&#x5148;&#x304C;&#x7D30;&#x5206;&#x5316;&#x3055;&#x308C;&#x307E;&#x3059;  </p>
 <pre><code># vim /etc/sysconfig/sysstat
 HISTORY=365
-</code></pre><ul>
-<li>&#x30ED;&#x30B0;&#x306E;&#x5727;&#x7E2E;  </li>
-</ul>
-<p>&#x6307;&#x5B9A;&#x65E5;&#x4EE5;&#x524D;&#x306E;&#x30ED;&#x30B0;&#x306F;&#x5727;&#x7E2E;  </p>
+</code></pre><p><i class="fas fa-check-circle">&#x30ED;&#x30B0;&#x306E;&#x5727;&#x7E2E;</i><br>&#x6307;&#x5B9A;&#x65E5;&#x4EE5;&#x524D;&#x306E;&#x30ED;&#x30B0;&#x306F;&#x5727;&#x7E2E;  </p>
 <pre><code># vim /etc/sysconfig/sysstat
 COMPRESSAFTER=31
-</code></pre><ul>
-<li>&#x30B7;&#x30B9;&#x30C6;&#x30E0;&#x30ED;&#x30B0;&#x53D6;&#x5F97;&#x9593;&#x9694;&#x306E;&#x8ABF;&#x6574;  </li>
-</ul>
-<p>&#x30C7;&#x30D5;&#x30A9;&#x30EB;&#x30C8;&#x3067;&#x306F;10&#x5206;&#x9593;&#x9694;&#x3067;&#x30B9;&#x30C6;&#x30FC;&#x30BF;&#x30B9;&#x3092;&#x30ED;&#x30B0;&#x306B;&#x53D6;&#x5F97;&#x3059;&#x308B;&#x304C;&#x3001;5&#x5206;&#x9593;&#x9694;&#x306B;&#x5909;&#x66F4;  </p>
+</code></pre><p><i class="fas fa-check-circle">&#x30B7;&#x30B9;&#x30C6;&#x30E0;&#x30ED;&#x30B0;&#x53D6;&#x5F97;&#x9593;&#x9694;&#x306E;&#x8ABF;&#x6574;</i><br>&#x30C7;&#x30D5;&#x30A9;&#x30EB;&#x30C8;&#x3067;&#x306F;10&#x5206;&#x9593;&#x9694;&#x3067;&#x30B9;&#x30C6;&#x30FC;&#x30BF;&#x30B9;&#x3092;&#x30ED;&#x30B0;&#x306B;&#x53D6;&#x5F97;&#x3059;&#x308B;&#x304C;&#x3001;5&#x5206;&#x9593;&#x9694;&#x306B;&#x5909;&#x66F4;  </p>
 <pre><code># vim /etc/cron.d/sysstat
 # Run system activity accounting tool every 10 minutes
 */5 * * * * root /usr/lib64/sa/sa1 1 1
@@ -926,7 +917,7 @@ COMPRESSAFTER=31
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"sysstatの設定","level":"1.10.3","depth":2,"next":{"title":"Auditの設定","level":"1.10.4","depth":2,"path":"9.tips/4.tips_audit.md","ref":"9.tips/4.tips_audit.md","articles":[]},"previous":{"title":"Fsecure Linux セキュリティ コマンドラインエディション","level":"1.10.2","depth":2,"path":"9.tips/2.tips_fsecure.md","ref":"9.tips/2.tips_fsecure.md","articles":[]},"dir":"ltr"},"config":{"plugins":["navigator","-japanese-support","-header"],"styles":{"website":"styles/website.css"},"pluginsConfig":{"layout":{"headerPath":"layouts/header.html"},"navigator":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Linux config manual","language":"ja","gitbook":"*","sharing":{"facebook":false,"twitter":false,"google":true,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","twitter","google","weibo","instapaper","vk"]},"description":"Linux, CentOS, Redhat, Manual, サーバ"},"file":{"path":"9.tips/3.tips_sysstat.md","mtime":"2018-06-29T06:59:16.713Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-06-21T04:25:45.061Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"sysstatの設定","level":"1.10.3","depth":2,"next":{"title":"Auditの設定","level":"1.10.4","depth":2,"path":"9.tips/4.tips_audit.md","ref":"9.tips/4.tips_audit.md","articles":[]},"previous":{"title":"Fsecure Linux セキュリティ コマンドラインエディション","level":"1.10.2","depth":2,"path":"9.tips/2.tips_fsecure.md","ref":"9.tips/2.tips_fsecure.md","articles":[]},"dir":"ltr"},"config":{"plugins":["navigator","-japanese-support","-header"],"styles":{"website":"styles/website.css"},"pluginsConfig":{"layout":{"headerPath":"layouts/header.html"},"navigator":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Linux config manual","language":"ja","gitbook":"*","sharing":{"facebook":false,"twitter":false,"google":true,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","twitter","google","weibo","instapaper","vk"]},"description":"Linux, CentOS, Redhat, Manual, サーバ"},"file":{"path":"9.tips/3.tips_sysstat.md","mtime":"2019-06-21T04:33:16.062Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-06-21T04:35:14.563Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
