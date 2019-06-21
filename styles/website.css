@@ -61,3 +61,8 @@ pre {
   color: #e3e3e3;
   font-size: 12px;
 }
+
+.markdown-section img {
+  border:solid 1px #ccc;
+  padding:4px;
+}
