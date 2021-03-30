@@ -1,1 +1,2 @@
-# Redhat8 / CentOS8 設定手順書
+
+Moved to https://bookit-update.netlify.app/docs_infra/el8/introduction  
